@@ -93,7 +93,7 @@ export default function FlavorArt() {
        <section id="menu" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold mb-4">Our Menu</h2>
-                <div className="flex justify-center gap-8 border-b border-white/10 pb-4">
+                <div className="flex justify-center gap-4 md:gap-8 border-b border-white/10 pb-4 flex-wrap">
                     {Object.keys(menu).map(cat => (
                         <button 
                             key={cat}

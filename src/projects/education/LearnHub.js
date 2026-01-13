@@ -58,13 +58,13 @@ export default function LearnHub() {
       <div className="max-w-[1600px] mx-auto p-4 md:p-6 lg:p-10 grid grid-cols-1 xl:grid-cols-3 gap-10">
         
         {/* Main Content Area */}
-        <div className="xl:col-span-2 space-y-10">
+        <div className="xl:col-span-2 space-y-6 md:space-y-10">
             {/* Hero / Continue Watching */}
             <div>
-                 <div className="flex justify-between items-end mb-6">
-                    <h1 className="text-3xl font-black text-gray-900">Continue Learning</h1>
-                    <a href="/projects" className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-xl font-bold hover:bg-gray-800 transition-colors">
-                        <ChevronRight className="rotate-180" size={18} /> Back to Projects
+                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 gap-4">
+                    <h1 className="text-2xl md:text-3xl font-black text-gray-900">Continue Learning</h1>
+                    <a href="/projects" className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-xl font-bold hover:bg-gray-800 transition-colors text-sm">
+                        <ChevronRight className="rotate-180" size={16} /> Back to Projects
                     </a>
                 </div>
                 
@@ -72,45 +72,45 @@ export default function LearnHub() {
                 <div className="relative aspect-video bg-gray-900 rounded-3xl overflow-hidden shadow-2xl group">
                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80" className="w-full h-full object-cover opacity-60" alt="Video" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                        <button className="w-20 h-20 bg-orange-600 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-orange-500/40">
-                            <PlayCircle size={40} fill="currentColor" />
+                        <button className="w-16 h-16 md:w-20 md:h-20 bg-orange-600 text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-orange-500/40">
+                            <PlayCircle size={32} className="md:w-10 md:h-10" fill="currentColor" />
                         </button>
                     </div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
                         <div className="w-full bg-gray-700 h-1 rounded-full mb-4 overflow-hidden">
                             <div className="bg-orange-500 w-1/3 h-full rounded-full relative">
                                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-md" />
                             </div>
                         </div>
-                        <div className="flex justify-between items-center font-bold text-sm">
+                        <div className="flex justify-between items-center font-bold text-xs md:text-sm">
                             <span className="flex items-center gap-2"><PlayCircle size={16} /> 12:45 / 45:00</span>
-                            <span className="uppercase tracking-widest text-xs opacity-70">1080p HD</span>
+                            <span className="uppercase tracking-widest opacity-70">1080p HD</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-6 flex justify-between items-start">
+                <div className="mt-6 flex flex-col md:flex-row justify-between items-start gap-4">
                     <div>
-                        <h2 className="text-2xl font-black text-gray-900 mb-2">Advanced State Management</h2>
+                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-2">Advanced State Management</h2>
                         <div className="flex items-center gap-4 text-sm font-bold text-gray-500">
-                            <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full">Module 4</span>
+                            <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs">Module 4</span>
                             <span className="flex items-center gap-1"><Clock size={16} /> 45 mins left</span>
                         </div>
                     </div>
-                    <button className="bg-gray-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-gray-800 transition-colors flex items-center gap-2">
+                    <button className="w-full md:w-auto bg-gray-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
                         Next Lesson <ChevronRight size={18} />
                     </button>
                 </div>
             </div>
 
             {/* Content Tabs */}
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-                <div className="flex gap-8 border-b border-gray-100 pb-4 mb-6">
+            <div className="bg-white rounded-3xl p-6 md:p-8 shadow-sm border border-gray-100">
+                <div className="flex gap-8 border-b border-gray-100 pb-4 mb-6 overflow-x-auto hide-scrollbar">
                     {['overview', 'curriculum', 'reviews', 'resources'].map(tab => (
                         <button 
                             key={tab}
                             onClick={() => setActiveTab(tab)}
-                            className={`pb-4 -mb-4 font-bold capitalize transition-colors border-b-2 ${activeTab === tab ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-400 hover:text-gray-600'}`}
+                            className={`pb-4 -mb-4 font-bold capitalize transition-colors border-b-2 whitespace-nowrap ${activeTab === tab ? 'border-orange-500 text-orange-600' : 'border-transparent text-gray-400 hover:text-gray-600'}`}
                         >
                             {tab}
                         </button>
@@ -119,20 +119,20 @@ export default function LearnHub() {
                 
                 <div className="space-y-6">
                     <h3 className="text-xl font-bold">About this course</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                         Master the art of state management in React. We will dive deep into Context, Redux, and modern alternatives like Zustand. By the end of this module, you will be able to architect complex applications with ease.
                     </p>
                     
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="bg-gray-50 p-4 rounded-xl flex items-center gap-4">
-                            <Award className="text-yellow-500" size={24} />
+                            <Award className="text-yellow-500 shrink-0" size={24} />
                             <div>
                                 <p className="font-bold text-gray-900">Certificate</p>
                                 <p className="text-xs text-gray-500">Earn up clicking complete</p>
                             </div>
                         </div>
                          <div className="bg-gray-50 p-4 rounded-xl flex items-center gap-4">
-                            <Download className="text-blue-500" size={24} />
+                            <Download className="text-blue-500 shrink-0" size={24} />
                             <div>
                                 <p className="font-bold text-gray-900">Resources</p>
                                 <p className="text-xs text-gray-500">12 Files available</p>
