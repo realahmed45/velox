@@ -8,7 +8,8 @@ import {
   X, 
   Code,
   Activity,
-  Workflow
+  Workflow,
+  Shield
 } from "lucide-react";
 
 export default function VeloxResponsive() {
