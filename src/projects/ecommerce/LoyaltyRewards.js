@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Award, Gift, Zap, TrendingUp, Star, ChevronRight, ShoppingBag, Users } from 'lucide-react';
-import { loadLoyaltyData, saveLoyaltyData } from '../../utils/storage';
+import { motion } from 'framer-motion';
+import { Gift, Zap, TrendingUp, Star, ChevronRight, ShoppingBag, Users } from 'lucide-react';
+import { loadLoyaltyData } from '../../utils/storage';
 
 export default function LoyaltyRewards() {
   const [loyalty, setLoyalty] = useState({

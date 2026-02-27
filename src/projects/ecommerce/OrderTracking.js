@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { Package, Truck, CheckCircle, Clock, MapPin, Search } from 'lucide-react';
 
 export default function OrderTracking({ orderNumber, onBack }) {

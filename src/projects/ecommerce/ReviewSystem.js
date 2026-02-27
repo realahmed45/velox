@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Star, ThumbsUp, ThumbsDown, Camera, Check, Filter, TrendingUp } from 'lucide-react';
+import { Star, ThumbsUp, ThumbsDown, Check, Filter, TrendingUp } from 'lucide-react';
 
 export default function ReviewSystem({ product, reviews }) {
   const [activeFilter, setActiveFilter] = useState('All');

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShoppingCart, Heart, Home, Search, Truck, Package, Shield, Award, ArrowRightLeft, Menu } from 'lucide-react';
+import { ShoppingCart, Heart, Home, Search, Truck, Shield, Award, ArrowRightLeft } from 'lucide-react';
 
 export default function Header({ 
   wishlistCount, 
@@ -113,7 +113,7 @@ export default function Header({
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-widest">
           <nav className="flex gap-8">
             {['New Arrivals', 'Living', 'Bedroom', 'Dining', 'Office', 'Sale'].map((item) => (
-              <a key={item} href="#" className="hover:text-white transition-colors relative group">
+              <a key={item} href="/projects" className="hover:text-white transition-colors relative group">
                 {item}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
               </a>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { saveOrder, clearCart } from '../../utils/storage';
-import { calculateSubtotal, calculateTax, calculateShipping, calculateTotal, createOrderObject } from '../../utils/orderUtils';
+import { calculateSubtotal, calculateTax, createOrderObject } from '../../utils/orderUtils';
 import ShippingForm from './ShippingForm';
 import ShippingMethodSelector from './ShippingMethodSelector';
 import PaymentMethodSelector from './PaymentMethodSelector';
@@ -25,7 +25,7 @@ export default function CheckoutFlow({ cart, onBackToCart, onOrderComplete, onTr
   });
   const [selectedMethod, setSelectedMethod] = useState(null);
   const [selectedPayment, setSelectedPayment] = useState(null);
-  const [promoCode, setPromoCode] = useState(null);
+  const [promoCode] = useState(null);
   const [processing, setProcessing] = useState(false);
   const [orderResult, setOrderResult] = useState(null);
 

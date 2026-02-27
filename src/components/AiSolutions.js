@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { 
-  Bot, 
   Cpu, 
   Workflow, 
-  Shield, 
   Zap, 
   MessageSquare, 
-  LineChart, 
-  Globe, 
   ArrowRight, 
   ChevronDown, 
   CheckCircle2, 
@@ -17,7 +13,6 @@ import {
   Database,
   Phone,
   BarChart4,
-  Briefcase,
   Menu,
   X
 } from "lucide-react";
@@ -33,7 +28,6 @@ export default function AiSolutions() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const whatsappLink = "https://wa.me/923329945014";
 
   const industries = [
     {

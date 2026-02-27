@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Map as MapIcon, Grid, Filter, Heart, Bed, Bath, Maximize, MessageCircle, X, ChevronRight, Share2, Star } from 'lucide-react';
+import { Search, Map as MapIcon, Grid, Heart, Bed, Bath, Maximize, MessageCircle, X, ChevronRight, Share2, Star } from 'lucide-react';
 import { properties } from './data/properties';
 import PropertyMap from './components/PropertyMap';
 import MortgageCalculator from './components/MortgageCalculator';

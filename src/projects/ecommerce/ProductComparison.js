@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import { X, ArrowRightLeft, Star, ShoppingCart, Check } from 'lucide-react';
 
 export default function ProductComparison({ products, onRemove, onClear, onAddToCart }) {

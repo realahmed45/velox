@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Pause, Volume2, Maximize, SkipForward, Settings } from 'lucide-react';
+import { Play, Volume2, Maximize, SkipForward, Settings } from 'lucide-react';
 
 export default function VideoPlayer({ title }) {
   return (

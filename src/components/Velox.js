@@ -3,19 +3,10 @@ import { Link } from "react-router-dom";
 import { 
   Bot, 
   Cpu, 
-  LineChart, 
-  MessageSquare, 
-  Sparkles, 
-  Zap, 
-  ArrowRight, 
+  Globe, 
   Menu, 
   X, 
-  Check, 
-  Globe, 
-  Smartphone, 
-  Shield,
   Code,
-  Layers,
   Activity,
   Workflow
 } from "lucide-react";

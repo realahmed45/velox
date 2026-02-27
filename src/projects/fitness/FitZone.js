@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dumbbell, Flame, Calendar, Clock, Music, Trophy, Activity, Zap, Play, ChevronRight } from 'lucide-react';
+import { Dumbbell, Flame, Music, Trophy, Zap, Play, ChevronRight } from 'lucide-react';
 import { classes, leaderboard } from './data/fitnessData';
 import WorkoutTimer from './components/WorkoutTimer';
 import ActivityHeatmap from './components/ActivityHeatmap';

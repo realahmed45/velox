@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Box, Maximize, RotateCcw, Camera, X, Smartphone, Layers, Move } from 'lucide-react';
+import { Maximize, RotateCcw, X, Smartphone, Move } from 'lucide-react';
 
 export default function ARPreview({ product, isOpen, onClose }) {
   const [isCalibrated, setIsCalibrated] = useState(false);

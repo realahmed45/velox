@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, X, Send, Headphones, Image as ImageIcon } from 'lucide-react';
+import { MessageSquare, X, Send } from 'lucide-react';
 import { saveChatHistory, loadChatHistory } from '../../utils/storage';
 
 const QUICK_RESPONSES = [

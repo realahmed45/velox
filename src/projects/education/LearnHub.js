@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { BookOpen, Trophy, Clock, Star, PlayCircle, Download, MessageSquare, Search, Flame, Award, ChevronRight } from 'lucide-react';
+import { BookOpen, Trophy, Clock, PlayCircle, Download, Search, Flame, Award, ChevronRight } from 'lucide-react';
 import { courses } from './data/courses';
-import VideoPlayer from './components/VideoPlayer';
 import PrototypeBanner from '../../components/common/PrototypeBanner';
 import { Menu, X } from 'lucide-react';
 

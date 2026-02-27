@@ -6,17 +6,9 @@ import {
   Zap, 
   Target, 
   Cpu, 
-  Globe, 
-  Code, 
-  Bot, 
   Workflow, 
-  Shield,
   Sparkles,
-  Layers,
-  ArrowRight,
-  ChevronRight,
-  Activity,
-  Box
+  ArrowRight
 } from "lucide-react";
 
 export default function AboutAutomation() {

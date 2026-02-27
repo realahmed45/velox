@@ -5,14 +5,8 @@ import {
   ArrowRight, 
   Menu, 
   X, 
-  Zap, 
-  Cpu, 
   Globe, 
-  Code, 
   Bot, 
-  Workflow, 
-  Shield,
-  Sparkles,
   Layers
 } from "lucide-react";
 

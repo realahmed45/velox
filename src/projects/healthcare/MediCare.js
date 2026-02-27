@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { 
-  Activity, Calendar, FileText, MessageSquare, Phone, Search, Bell, Menu, 
-  User, Heart, ChevronRight, Play, Pause, Video, Mic, MicOff, X 
+  Activity, FileText, Phone, Bell, Menu, 
+  Heart, ChevronRight, Play, Pause, Video, Mic, X 
 } from 'lucide-react';
-import { healthcareData } from '../../data/healthcareData';
 import PrototypeBanner from '../../components/common/PrototypeBanner';
 
 export default function MediCare() {

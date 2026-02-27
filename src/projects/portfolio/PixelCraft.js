@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Instagram, Twitter, Linkedin, Mail, X, ExternalLink } from 'lucide-react';
+import { ArrowRight, Instagram, Twitter, X, ExternalLink } from 'lucide-react';
 import { portfolioItems, services } from './data/portfolioData';
 import { AnimatePresence, motion } from 'framer-motion';
 import PrototypeBanner from '../../components/common/PrototypeBanner';

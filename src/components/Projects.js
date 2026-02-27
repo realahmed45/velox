@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Zap, Code, Bot, LineChart, MessageSquare, Menu, X, ArrowRight } from "lucide-react";
+import { Code, Menu, X, ArrowRight } from "lucide-react";
 import { categories, projectsData } from "../data/projectsData";
 
 export default function Projects() {
@@ -8,7 +8,6 @@ export default function Projects() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cursorX, setCursorX] = useState(0);
   const [cursorY, setCursorY] = useState(0);
-  const whatsappLink = "https://wa.me/923329945014";
 
   useEffect(() => {
     const handleMouseMove = (e) => {

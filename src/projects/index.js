@@ -1,5 +1,5 @@
 // Simplified but functional project components for remaining 7 projects
-import React from "react";
+
 import UrbanNest from "./real-estate/UrbanNest";
 import MediCare from "./healthcare/MediCare";
 import LearnHub from "./education/LearnHub";

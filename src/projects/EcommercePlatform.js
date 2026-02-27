@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { X, Sparkles, SlidersHorizontal, ChevronDown } from "lucide-react";
+import { X, SlidersHorizontal, ChevronDown } from "lucide-react";
 import { furnitureProducts } from "../data/furnitureData";
 import CheckoutFlow from "./ecommerce/CheckoutFlow";
 import LiveChat from "./ecommerce/LiveChat";

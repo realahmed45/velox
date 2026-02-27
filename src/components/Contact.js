@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Send, Mail, Phone, MapPin, ArrowRight, MessageSquare, Instagram, Linkedin, Twitter, CheckCircle2, Menu, X, Cpu, Globe, Layers, Sparkles } from "lucide-react";
+import { Mail, Phone, ArrowRight, MessageSquare, Instagram, Linkedin, Twitter, CheckCircle2, Menu, X, Cpu, Globe, Layers, Sparkles } from "lucide-react";
 
 export default function Contact() {
   const [scrollY, setScrollY] = React.useState(0);
