@@ -157,10 +157,10 @@ export default function AiSolutions() {
                <Sparkles size={16} className="text-[#FF6B00]" />
                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-black">Deep Intelligence Architecture</span>
             </div>
-            <h1 className="text-5xl md:text-[140px] font-black tracking-tighter leading-[0.9] md:leading-[0.85] italic uppercase mb-12 text-black px-4 md:px-0">
+            <h1 className="text-4xl md:text-[140px] font-black tracking-tighter leading-[1] md:leading-[0.85] italic uppercase mb-8 md:mb-12 text-black px-2 md:px-0">
                AUTONOMOUS<br/><span className="text-[#FF6B00]">INTELLIGENCE</span>
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-600 max-w-5xl mx-auto font-medium leading-relaxed italic uppercase tracking-wider">
+            <p className="text-xl md:text-3xl text-gray-600 max-w-5xl mx-auto font-medium leading-relaxed italic uppercase tracking-wider px-4">
                We architect bespoke <span className="text-black font-bold border-b-2 border-[#FF6B00]">Neural Units</span> designed to dominate your market through absolute efficiency.
             </p>
          </div>
@@ -169,12 +169,12 @@ export default function AiSolutions() {
       {/* Exhaustive Catalog Section */}
       <section className="py-32 px-6 bg-[#080808]">
          <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-end gap-10 mb-24 text-white">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20 md:mb-24 text-white">
                <div className="max-w-3xl">
-                  <h2 className="text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none mb-8">THE SPECTRUM OF<br/><span className="text-[#FF6B00] not-italic">AUTOMATION</span></h2>
-                  <p className="text-gray-400 text-xl font-medium max-w-xl uppercase tracking-widest leading-relaxed">From n8n agentic workflows to full-scale LLM integrations.</p>
+                  <h2 className="text-4xl md:text-8xl font-black tracking-tighter italic uppercase leading-none mb-6 md:mb-8">THE SPECTRUM OF<br/><span className="text-[#FF6B00] not-italic">AUTOMATION</span></h2>
+                  <p className="text-gray-400 text-lg md:text-xl font-medium max-w-xl uppercase tracking-widest leading-relaxed">From n8n agentic workflows to full-scale LLM integrations.</p>
                </div>
-               <div className="px-10 py-5 border border-white/10 bg-white/5 text-xs font-black uppercase tracking-[0.4em] text-[#FF6B00]">Unit 01: Core Infra</div>
+               <div className="px-8 md:px-10 py-4 md:py-5 border border-white/10 bg-white/5 text-[10px] font-black uppercase tracking-[0.4em] text-[#FF6B00]">Unit 01: Core Infra</div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
@@ -186,10 +186,10 @@ export default function AiSolutions() {
                   { icon: <Zap />, title: "Sales Auto-Outreach", d: "Personalized cold outreach engines that research prospects at scale via LinkedIn/Email." },
                   { icon: <BarChart4 />, title: "Intelligent ETL", d: "Automated Data Extraction, Transformation, and Visualization for real-time BI." }
                 ].map((item, i) => (
-                  <div key={i} className="bg-black p-12 group hover:bg-[#FF6B00]/5 transition-all duration-500">
-                     <div className="text-[#FF6B00] mb-8 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
-                     <h3 className="text-3xl font-black uppercase tracking-tight text-white mb-6 italic">{item.title}</h3>
-                     <p className="text-gray-500 font-medium leading-relaxed mb-10">{item.d}</p>
+                  <div key={i} className="bg-black p-8 md:p-12 group hover:bg-[#FF6B00]/5 transition-all duration-500">
+                     <div className="text-[#FF6B00] mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
+                     <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight text-white mb-4 md:mb-6 italic">{item.title}</h3>
+                     <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-8 md:mb-10">{item.d}</p>
                      <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-gray-700 group-hover:text-[#FF6B00]">
                         <div className="w-1.5 h-1.5 bg-[#FF6B00]" />
                         Deep Deployment Available
@@ -207,10 +207,10 @@ export default function AiSolutions() {
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF6B00]/5 blur-[150px] pointer-events-none" />
         <div className="max-w-[1400px] mx-auto relative z-10">
-          <div className="text-center mb-24">
-            <div className="text-[#FF6B00] font-black uppercase tracking-[0.6em] text-[12px] mb-8">Conceptual Blueprint</div>
-            <h2 className="text-5xl md:text-8xl font-black italic uppercase italic tracking-tighter mb-10">ANATOMY OF <br/><span className="text-[#FF6B00]">AUTOMATION</span></h2>
-            <p className="text-gray-500 font-bold uppercase tracking-widest text-lg">Understanding the neural transformation of your data.</p>
+          <div className="text-center mb-16 md:mb-24">
+            <div className="text-[#FF6B00] font-black uppercase tracking-[0.6em] text-[10px] md:text-[12px] mb-6 md:mb-8">Conceptual Blueprint</div>
+            <h2 className="text-4xl md:text-8xl font-black italic uppercase tracking-tighter mb-8 md:mb-10">ANATOMY OF <br/><span className="text-[#FF6B00]">AUTOMATION</span></h2>
+            <p className="text-gray-500 font-bold uppercase tracking-widest text-sm md:text-lg px-4">Understanding the neural transformation of your data.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
@@ -229,11 +229,11 @@ export default function AiSolutions() {
             {/* Step 2: Processing */}
             <div className="relative group">
                <div className="hidden lg:block absolute -left-10 top-1/2 -translate-y-1/2 z-20 text-[#FF6B00] animate-pulse"><ArrowRight size={40} /></div>
-               <div className="glass-card p-14 border-[#FF6B00]/40 bg-[#FF6B00]/5 text-center relative scale-110 shadow-2xl shadow-[#FF6B00]/10">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white text-black flex items-center justify-center font-black rounded-full shadow-lg">02</div>
-                  <div className="text-white mb-8 flex justify-center"><Cpu size={56} className="animate-spin-slow" /></div>
-                  <h3 className="text-3xl font-black uppercase italic mb-6 text-[#FF6B00]">Neural Logic</h3>
-                  <p className="text-gray-300 font-medium leading-relaxed">The Velox Agent parses intent, retrieves context via RAG, and applies business-specific decision logic.</p>
+               <div className="glass-card p-10 md:p-14 border-[#FF6B00]/40 bg-[#FF6B00]/5 text-center relative scale-100 md:scale-110 shadow-2xl shadow-[#FF6B00]/10">
+                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-10 md:w-12 h-10 md:h-12 bg-white text-black flex items-center justify-center font-black rounded-full shadow-lg">02</div>
+                  <div className="text-white mb-6 md:mb-8 flex justify-center"><Cpu size={48} className="animate-spin-slow" /></div>
+                  <h3 className="text-2xl md:text-3xl font-black uppercase italic mb-4 md:mb-6 text-[#FF6B00]">Neural Logic</h3>
+                  <p className="text-gray-300 text-sm md:text-base font-medium leading-relaxed">The Velox Agent parses intent, retrieves context via RAG, and applies business-specific decision logic.</p>
                </div>
                <div className="hidden lg:block absolute -right-10 top-1/2 -translate-y-1/2 z-20 text-[#FF6B00] animate-pulse"><ArrowRight size={40} /></div>
             </div>
@@ -247,9 +247,9 @@ export default function AiSolutions() {
             </div>
           </div>
 
-          <div className="mt-32 p-16 bg-white border-4 border-black rounded-sm shadow-2xl relative">
-             <div className="absolute -top-6 left-12 px-6 py-2 bg-[#FF6B00] text-white font-black uppercase tracking-widest text-[10px]">Processing Layer Architecture</div>
-             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+          <div className="mt-20 md:mt-32 p-8 md:p-16 bg-white border-4 border-black rounded-sm shadow-2xl relative">
+             <div className="absolute -top-6 left-8 md:left-12 px-4 md:px-6 py-2 bg-[#FF6B00] text-white font-black uppercase tracking-widest text-[9px] md:text-[10px]">Processing Layer Architecture</div>
+             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16">
                 {[
                   { label: "Extraction", val: "Multimodal AI" },
                   { label: "Reasoning", val: "n8n Agents" },
@@ -257,8 +257,8 @@ export default function AiSolutions() {
                   { label: "Action", val: "API Webhooks" }
                 ].map((stat, i) => (
                   <div key={i} className="text-center md:text-left">
-                     <div className="text-[12px] font-black uppercase tracking-[0.5em] text-gray-400 mb-4">{stat.label}</div>
-                     <div className="text-2xl font-black italic uppercase text-black">{stat.val}</div>
+                     <div className="text-[10px] md:text-[12px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-gray-400 mb-2 md:mb-4">{stat.label}</div>
+                     <div className="text-lg md:text-2xl font-black italic uppercase text-black">{stat.val}</div>
                   </div>
                 ))}
              </div>

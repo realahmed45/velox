@@ -59,13 +59,13 @@ export default function LearnHub() {
         {/* Main Content Area */}
         <div className="xl:col-span-2 space-y-6 md:space-y-10">
             {/* Hero / Continue Watching */}
-            <div>
-                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-6 gap-4">
-                    <h1 className="text-2xl md:text-3xl font-black text-gray-900">Continue Learning</h1>
-                    <a href="/projects" className="flex items-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-xl font-bold hover:bg-gray-800 transition-colors text-sm">
-                        <ChevronRight className="rotate-180" size={16} /> Back to Projects
-                    </a>
-                </div>
+             <div>
+                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6 md:mb-8 gap-4 px-2">
+                     <h1 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">CONTINUE<br className="sm:hidden"/> LEARNING</h1>
+                     <a href="/projects" className="flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-gray-800 transition-colors text-xs uppercase tracking-widest border border-white/10">
+                         <ChevronRight className="rotate-180" size={14} /> Artifacts
+                     </a>
+                 </div>
                 
                 {/* Interactive Video Player */}
                 <div className="relative aspect-video bg-gray-900 rounded-3xl overflow-hidden shadow-2xl group">
@@ -88,15 +88,15 @@ export default function LearnHub() {
                     </div>
                 </div>
 
-                <div className="mt-6 flex flex-col md:flex-row justify-between items-start gap-4">
-                    <div>
-                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-2">Advanced State Management</h2>
-                        <div className="flex items-center gap-4 text-sm font-bold text-gray-500">
-                            <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs">Module 4</span>
+                <div className="mt-6 md:mt-8 flex flex-col md:flex-row justify-between items-start gap-6 px-2">
+                    <div className="flex-1">
+                        <h2 className="text-xl md:text-2xl font-black text-gray-900 mb-2 leading-tight">Advanced State Management</h2>
+                        <div className="flex flex-wrap items-center gap-3 md:gap-4 text-xs md:text-sm font-bold text-gray-500">
+                            <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full">Module 4</span>
                             <span className="flex items-center gap-1"><Clock size={16} /> 45 mins left</span>
                         </div>
                     </div>
-                    <button className="w-full md:w-auto bg-gray-900 text-white px-6 py-3 rounded-xl font-bold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                    <button className="w-full md:w-auto bg-orange-600 text-white px-8 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-orange-700 transition-all shadow-lg shadow-orange-500/20 flex items-center justify-center gap-3">
                         Next Lesson <ChevronRight size={18} />
                     </button>
                 </div>

@@ -60,20 +60,20 @@ export default function FitZone() {
             
             {/* Left Col: Hero Stats */}
             <div className="lg:col-span-2 space-y-8">
-                <div className="bg-gradient-to-r from-gray-900 to-black p-8 rounded-3xl border border-gray-800 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
-                    <div className="absolute top-0 right-0 p-8 opacity-10"><Zap size={200} /></div>
+                <div className="bg-gradient-to-r from-gray-900 to-black p-6 md:p-8 rounded-3xl border border-gray-800 flex flex-col md:flex-row items-center gap-6 md:gap-8 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-8 opacity-10"><Zap size={200} className="md:size-[200px] size-[120px]" /></div>
                     
-                    <div className="relative z-10 flex-1">
-                        <h1 className="text-4xl font-black italic mb-2">READY TO <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">CRUSH IT?</span></h1>
-                        <p className="text-gray-400 mb-6 font-medium">You're on a 12-day streak! Keep the momentum going with today's HIIT session.</p>
-                        <div className="flex gap-4">
-                            <div className="bg-gray-800/50 p-4 rounded-xl backdrop-blur-sm">
-                                <p className="text-xs text-gray-500 font-bold uppercase">Calories Burned</p>
-                                <p className="text-2xl font-black text-white">12,450</p>
+                    <div className="relative z-10 flex-1 text-center md:text-left">
+                        <h1 className="text-3xl md:text-4xl font-black italic mb-2 tracking-tighter uppercase">READY TO <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-green-600">CRUSH IT?</span></h1>
+                        <p className="text-sm md:text-base text-gray-400 mb-6 font-medium px-4 md:px-0">You're on a 12-day streak! Keep the momentum going with today's HIIT session.</p>
+                        <div className="flex justify-center md:justify-start gap-4">
+                            <div className="bg-gray-800/50 p-3 md:p-4 rounded-xl backdrop-blur-sm border border-white/5">
+                                <p className="text-[10px] text-gray-500 font-bold uppercase">Calories</p>
+                                <p className="text-xl md:text-2xl font-black text-white">12,450</p>
                             </div>
-                             <div className="bg-gray-800/50 p-4 rounded-xl backdrop-blur-sm">
-                                <p className="text-xs text-gray-500 font-bold uppercase">Workouts</p>
-                                <p className="text-2xl font-black text-white">24</p>
+                             <div className="bg-gray-800/50 p-3 md:p-4 rounded-xl backdrop-blur-sm border border-white/5">
+                                <p className="text-[10px] text-gray-500 font-bold uppercase">Workouts</p>
+                                <p className="text-xl md:text-2xl font-black text-white">24</p>
                             </div>
                         </div>
                     </div>

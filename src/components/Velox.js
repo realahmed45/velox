@@ -99,15 +99,15 @@ export default function VeloxResponsive() {
             <span className="text-[12px] font-black uppercase tracking-[0.6em] text-black">System Protocol 4.0 Active</span>
           </div>
           
-          <div className="mb-24 relative">
-            <h1 className="text-[45px] md:text-[80px] lg:text-[160px] font-black text-black leading-[0.9] tracking-tighter uppercase italic animate-fadeInUp mb-12">
+          <div className="mb-10 md:mb-24 relative px-2">
+            <h1 className="text-4xl sm:text-5xl md:text-[80px] lg:text-[150px] font-black text-black leading-[0.9] tracking-tighter uppercase italic animate-fadeInUp mb-6 md:mb-12">
               UNIFIED<br/>
-              <span className="text-[#FF6B00] not-italic shadow-[#FF6B00]/20">SOLUTIONS</span>
+              <span className="text-[#FF6B00] not-italic">SOLUTIONS</span>
             </h1>
-            <div className="flex items-center justify-center gap-8 mt-12 animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
-              <div className="h-0.5 w-40 bg-black/10" />
-              <span className="text-2xl md:text-4xl font-black italic uppercase tracking-[1.2em] ml-6 text-black">UNIT</span>
-              <div className="h-0.5 w-40 bg-black/10" />
+            <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-8 mt-4 md:mt-12 animate-fadeInUp" style={{ animationDelay: '0.1s' }}>
+              <div className="h-0.5 w-8 sm:w-12 md:w-40 bg-black/10" />
+              <span className="text-lg sm:text-xl md:text-4xl font-black italic uppercase tracking-[0.4em] sm:tracking-[0.6em] md:tracking-[1.2em] ml-2 md:ml-6 text-black">UNIT</span>
+              <div className="h-0.5 w-8 sm:w-12 md:w-40 bg-black/10" />
             </div>
           </div>
           
@@ -137,8 +137,8 @@ export default function VeloxResponsive() {
             </div>
           </div>
 
-          <p className="text-2xl md:text-3xl text-black font-bold max-w-5xl mx-auto mb-24 leading-[1.2] animate-fadeInUp tracking-tight" style={{ animationDelay: '0.3s' }}>
-            A precision engineering studio architecting <span className="text-[#FF6B00] underline decoration-4 underline-offset-8">Autonomous Neural Systems</span> and <span className="text-[#FF6B00] underline decoration-4 underline-offset-8">High-Velocity Web Ecosystems</span>.
+          <p className="text-xl md:text-3xl text-black font-bold max-w-5xl mx-auto mb-16 md:mb-24 leading-snug md:leading-[1.2] animate-fadeInUp tracking-tight px-4" style={{ animationDelay: '0.3s' }}>
+            A precision engineering studio architecting <span className="text-[#FF6B00] underline decoration-2 md:decoration-4 underline-offset-4 md:underline-offset-8">Autonomous Neural Systems</span> and <span className="text-[#FF6B00] underline decoration-2 md:decoration-4 underline-offset-4 md:underline-offset-8">High-Velocity Web Ecosystems</span>.
           </p>
           
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-6 md:gap-10 animate-fadeInUp px-4 md:px-0" style={{ animationDelay: '0.4s' }}>
@@ -164,8 +164,8 @@ export default function VeloxResponsive() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <div className="text-[#FF6B00] font-black uppercase tracking-[0.4em] text-[10px] mb-6">Unified Capabilities</div>
-              <h2 className="text-5xl md:text-8xl font-black text-white italic tracking-tighter uppercase leading-[0.9] mb-10">ONE UNIT.<br/>TWO <span className="text-[#FF6B00] not-italic">POWERS.</span></h2>
-              <p className="text-gray-400 text-xl font-medium leading-relaxed max-w-xl mb-12">
+              <h2 className="text-4xl md:text-8xl font-black text-white italic tracking-tighter uppercase leading-[1] md:leading-[0.9] mb-8 md:mb-10">ONE UNIT.<br/>TWO <span className="text-[#FF6B00] not-italic">POWERS.</span></h2>
+              <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-xl mb-12">
                 We don't just build websites, and we don't just code AI. We engineer cohesive systems where high-end design meets autonomous logic to create unbeatable competitive advantages.
               </p>
               
@@ -183,16 +183,16 @@ export default function VeloxResponsive() {
 
             <div className="relative">
               <div className="absolute inset-0 bg-[#FF6B00]/10 blur-[100px] rounded-full" />
-              <div className="relative grid grid-cols-2 gap-4">
+              <div className="relative grid grid-cols-1 md:grid-cols-2 gap-4">
                  {[
                    { icon: <Bot size={24} />, title: "Agentic AI", desc: "Autonomous n8n & Python agents." },
                    { icon: <Globe size={24} />, title: "Global Web", desc: "Scalable enterprise ecosystems." },
                    { icon: <Workflow size={24} />, title: "Deep Sync", desc: "Seamless CRM & API integration." },
                    { icon: <Shield size={24} />, title: "Elite Security", desc: "Bank-grade infrastructure." }
                  ].map((box, i) => (
-                   <div key={i} className="glass-card p-10 orange-border-glow group transition-all duration-500">
-                      <div className="text-[#FF6B00] mb-6 group-hover:scale-110 transition-transform duration-500">{box.icon}</div>
-                      <h4 className="text-white font-black uppercase tracking-tight mb-2 italic italic">{box.title}</h4>
+                   <div key={i} className="glass-card p-6 md:p-10 orange-border-glow group transition-all duration-500">
+                      <div className="text-[#FF6B00] mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500">{box.icon}</div>
+                      <h4 className="text-white font-black uppercase tracking-tight mb-2 italic">{box.title}</h4>
                       <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">{box.desc}</p>
                    </div>
                  ))}
@@ -203,11 +203,11 @@ export default function VeloxResponsive() {
       </section>
 
       {/* Trust Banner */}
-      <section className="py-20 bg-black border-b border-white/5">
-        <div className="max-w-[1400px] mx-auto px-6 overflow-hidden">
-          <div className="flex justify-between items-center opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-1000">
+      <section className="py-12 md:py-20 bg-black border-b border-white/5 overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-10 opacity-30 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-1000">
              {["Figma", "Webflow", "React", "OpenAI", "Python", "Node.js"].map((tech, i) => (
-               <span key={i} className="text-xl md:text-3xl font-black italic tracking-tighter uppercase px-10 text-white">{tech}</span>
+               <span key={i} className="text-lg sm:text-xl md:text-3xl font-black italic tracking-tighter uppercase text-white whitespace-nowrap">{tech}</span>
              ))}
           </div>
         </div>
@@ -217,11 +217,11 @@ export default function VeloxResponsive() {
       <section className="py-48 bg-[#050505] relative overflow-hidden text-center">
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF6B00]/5 rounded-full blur-[150px]" />
          <div className="relative z-10 max-w-4xl mx-auto px-6">
-            <h2 className="text-6xl md:text-[180px] font-black text-white italic tracking-tighter leading-none mb-12 uppercase">
+            <h2 className="text-6xl md:text-[120px] lg:text-[180px] font-black text-white italic tracking-tighter leading-[0.9] mb-8 md:mb-12 uppercase">
               DOMINATE<br/><span className="text-[#FF6B00] not-italic">NOW.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-400 font-medium mb-16 uppercase tracking-[0.2em]">Ready to integrate the future?</p>
-            <Link to="/contact" className="btn-orange text-xl px-20">Reach Out</Link>
+            <p className="text-lg md:text-2xl text-gray-400 font-medium mb-12 md:mb-16 uppercase tracking-[0.2em] px-4">Ready to integrate the future?</p>
+            <Link to="/contact" className="btn-orange inline-block text-lg px-12 md:px-20 py-5">Reach Out</Link>
          </div>
       </section>
 

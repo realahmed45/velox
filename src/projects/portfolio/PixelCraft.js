@@ -53,23 +53,23 @@ export default function PixelCraft() {
       <div className="max-w-[1800px] mx-auto px-6 md:px-12">
         
         {/* Header */}
-        <header className="py-20 md:py-32">
-            <h1 className="text-5xl md:text-9xl font-black leading-none mb-8 break-words">
-                DIGITAL <br />
+        <header className="py-16 md:py-32 text-center md:text-left">
+            <h1 className="text-5xl md:text-9xl font-black leading-none mb-8 break-words tracking-tighter uppercase">
+                DIGITAL <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">ALCHEMY</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-400 max-w-2xl leading-relaxed">
-                We blend creativity and technology to forge digital experiences that captivate, inspire, and convert.
+            <p className="text-lg md:text-2xl text-neutral-400 max-w-2xl leading-relaxed mx-auto md:mx-0">
+                Crafting digital experiences that captivate, inspire, and convert through a blend of creativity and tech.
             </p>
         </header>
 
         {/* Filters */}
-        <div className="flex flex-wrap gap-4 mb-12">
+        <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 md:gap-4 mb-12">
             {['All', 'Branding', 'Design', 'Photography', '3D Art'].map(cat => (
                  <button 
                     key={cat}
                     onClick={() => setFilter(cat)}
-                    className={`px-6 py-2 rounded-full border border-neutral-700 font-bold text-sm transition-all hover:border-pink-500 ${filter === cat ? 'bg-pink-500 border-pink-500 text-black' : 'text-neutral-300'}`}
+                    className={`px-5 md:px-6 py-2 rounded-full border border-neutral-700 font-bold text-[10px] md:text-sm uppercase tracking-widest transition-all hover:border-pink-500 active:scale-95 ${filter === cat ? 'bg-pink-500 border-pink-500 text-black shadow-lg shadow-pink-500/20' : 'text-neutral-300'}`}
                 >
                     {cat}
                 </button>

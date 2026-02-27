@@ -22,17 +22,17 @@ export default function DashboardStats() {
       {stats.map((stat, i) => {
         const Icon = stat.icon;
         return (
-          <div key={i} className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-            <div className="flex items-center justify-between mb-4">
-              <div className={`p-3 rounded-xl bg-gradient-to-br ${stat.color} shadow-lg`}>
-                <Icon size={24} className="text-white" />
+          <div key={i} className="bg-white p-4 md:p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <div className="flex items-center justify-between mb-3 md:mb-4">
+              <div className={`p-2.5 md:p-3 rounded-xl bg-gradient-to-br ${stat.color} shadow-lg`}>
+                <Icon size={20} className="text-white md:size-[24px]" />
               </div>
-              <span className={`text-[10px] font-black px-2 py-1 rounded-md uppercase tracking-wider bg-gray-50 text-gray-500`}>
+              <span className={`text-[9px] md:text-[10px] font-black px-2 py-1 rounded-md uppercase tracking-wider bg-gray-50 text-gray-500`}>
                 {stat.change}
               </span>
             </div>
-            <p className="text-gray-400 text-xs font-bold uppercase tracking-widest mb-1">{stat.label}</p>
-            <p className="text-4xl font-black text-gray-900 tracking-tight">{stat.value}</p>
+            <p className="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-widest mb-1">{stat.label}</p>
+            <p className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight">{stat.value}</p>
           </div>
         );
       })}

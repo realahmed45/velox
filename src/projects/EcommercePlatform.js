@@ -128,25 +128,25 @@ export default function EcommercePlatform() {
       />
 
       <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* Editoral Hero */}
-        <div className="relative h-[600px] mb-20 overflow-hidden bg-zinc-100 flex items-center">
+        {/* Editorial Hero */}
+        <div className="relative h-[450px] md:h-[600px] mb-12 md:mb-20 overflow-hidden bg-zinc-100 flex items-center">
            <img 
             src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop" 
             alt="Hero Interior" 
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="relative z-10 max-w-4xl px-12 md:px-24 text-white">
-            <span className="inline-block border border-white/30 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] mb-6 backdrop-blur-sm">
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative z-10 max-w-4xl px-8 md:px-24 text-white">
+            <span className="inline-block border border-white/50 px-4 py-1.5 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-4 md:mb-6 backdrop-blur-md">
               Collection 2026
             </span>
-            <h2 className="text-7xl md:text-9xl font-serif mb-8 leading-[0.9]">
+            <h2 className="text-6xl md:text-9xl font-serif mb-6 md:mb-8 leading-[0.9] tracking-tighter">
               Art of<br/><span className="italic font-light">Living.</span>
             </h2>
-            <p className="text-lg max-w-lg mb-10 font-light opacity-90 leading-relaxed border-l-2 border-white pl-6">
-              Discover a curated selection of {furnitureProducts.length}+ bespoke pieces designed to elevate your sanctuary. 
+            <p className="text-sm md:text-lg max-w-sm md:max-w-lg mb-8 md:10 font-light opacity-90 leading-relaxed border-l-2 border-white pl-4 md:pl-6">
+              A curated selection of {furnitureProducts.length}+ bespoke pieces designed to elevate your sanctuary. 
             </p>
-            <button className="bg-white text-zinc-950 px-10 py-5 font-black uppercase tracking-widest hover:bg-zinc-200 transition-colors">
+            <button className="bg-white text-zinc-950 px-8 py-4 md:px-10 md:py-5 font-black uppercase tracking-widest hover:bg-zinc-200 transition-all text-xs md:text-base">
               Explore Catalog
             </button>
           </div>

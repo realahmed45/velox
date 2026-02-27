@@ -93,16 +93,16 @@ export default function Projects() {
         </div>
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-[#FF6B00] font-black text-[10px] uppercase tracking-[0.6em] mb-8 animate-up">Web & AI Exploration Zone</div>
-          <h1 className="text-5xl md:text-[140px] font-black tracking-tighter leading-[0.9] md:leading-[0.8] mb-12 italic uppercase animate-up text-black px-4 md:px-0">
+          <h1 className="text-5xl md:text-[140px] font-black tracking-tighter leading-[1] md:leading-[0.8] mb-8 md:mb-12 italic uppercase animate-up text-black px-2 md:px-0">
             ENGINEERED<br/>ARTIFACTS
           </h1>
           
-          <div className="flex flex-wrap gap-6 animate-up">
+          <div className="flex flex-wrap gap-4 md:gap-6 animate-up px-2 md:px-0">
             {categories.map((cat, i) => (
               <button
                 key={i}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-12 py-6 text-[12px] font-black uppercase tracking-[0.4em] transition-all rounded-sm border-[3px] ${
+                className={`px-6 md:px-12 py-4 md:py-6 text-[10px] md:text-[12px] font-black uppercase tracking-[0.2em] md:tracking-[0.4em] transition-all rounded-sm border-[2px] md:border-[3px] ${
                   activeCategory === cat 
                   ? 'bg-black text-white border-black shadow-xl shadow-black/20' 
                   : 'bg-transparent text-black border-black/10 hover:border-black'
@@ -137,30 +137,30 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="p-10 flex flex-col flex-1">
-                <div className="flex justify-between items-center mb-8">
-                  <div className="text-[11px] font-black text-[#FF6B00] uppercase tracking-[0.4em]">
+              <div className="p-6 md:p-10 flex flex-col flex-1">
+                <div className="flex justify-between items-center mb-6 md:mb-8">
+                  <div className="text-[10px] md:text-[11px] font-black text-[#FF6B00] uppercase tracking-[0.4em]">
                      {project.year || '2026'} Artifact
                   </div>
                 </div>
-
-                <h3 className="text-4xl font-black uppercase tracking-tighter text-white mb-6 group-hover:text-[#FF6B00] transition-colors italic">
+ 
+                <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tighter text-white mb-4 md:mb-6 group-hover:text-[#FF6B00] transition-colors italic">
                    {project.name || project.title}
                 </h3>
-                <p className="text-gray-300 font-medium leading-relaxed mb-10 flex-1 text-lg">
+                <p className="text-gray-400 md:text-gray-300 font-medium leading-relaxed mb-6 md:mb-10 flex-1 text-base md:text-lg">
                    {project.description}
                 </p>
-
-                <div className="flex flex-wrap gap-3 mb-10">
+ 
+                <div className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-10">
                    {(project.techStack || []).slice(0, 3).map((tech, j) => (
-                     <span key={j} className="text-[10px] font-black text-white/40 uppercase tracking-widest bg-white/5 px-4 py-2 border border-white/5">
+                     <span key={j} className="text-[9px] md:text-[10px] font-black text-white/40 uppercase tracking-widest bg-white/5 px-3 py-1 md:px-4 md:py-2 border border-white/5">
                         {tech}
                      </span>
                    ))}
                 </div>
-
-                <div className="inline-flex items-center gap-4 text-[13px] font-black uppercase tracking-[0.3em] text-[#FF6B00] pt-6 border-t border-white/5 group-hover:gap-6 transition-all">
-                  Launch Artifact <ArrowRight size={18} />
+ 
+                <div className="inline-flex items-center gap-3 md:gap-4 text-[12px] md:text-[13px] font-black uppercase tracking-[0.3em] text-[#FF6B00] pt-4 md:pt-6 border-t border-white/5 group-hover:gap-6 transition-all">
+                   Launch Artifact <ArrowRight size={18} />
                 </div>
               </div>
             </Link>
@@ -169,12 +169,12 @@ export default function Projects() {
       </main>
 
       {/* Footer CTA */}
-      <footer className="bg-white text-black py-64 px-6 text-center border-t border-black/5">
+      <footer className="bg-white text-black py-48 md:py-64 px-6 text-center border-t border-black/5">
          <div className="max-w-4xl mx-auto">
-            <h2 className="text-7xl md:text-[140px] font-black italic mb-12 uppercase tracking-tighter leading-none">CAPTURE<br/>THE MARKET.</h2>
+            <h2 className="text-5xl md:text-[140px] font-black italic mb-8 md:mb-12 uppercase tracking-tighter leading-none">CAPTURE<br/>THE MARKET.</h2>
             <Link 
               to="/contact"
-              className="px-24 py-10 bg-[#FF6B00] text-white font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-700 rounded-sm inline-block text-2xl shadow-2xl shadow-[#FF6B00]/20"
+              className="px-16 md:px-24 py-8 md:py-10 bg-[#FF6B00] text-white font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-700 rounded-sm inline-block text-xl md:text-2xl shadow-2xl shadow-[#FF6B00]/20"
             >
               Secure Strategic Slot
             </Link>

@@ -24,29 +24,29 @@ export default function WanderLux() {
              </a>
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-6 h-full flex flex-col justify-center">
-            <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter drop-shadow-2xl">
-                WANDER<span className="text-sky-400">LUX</span>
+        <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-6 h-full flex flex-col justify-center text-center md:text-left">
+            <h1 className="text-5xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter drop-shadow-2xl uppercase">
+                WANDER<span className="text-sky-400 font-light italic">LUX</span>
             </h1>
-            <p className="text-xl md:text-2xl font-medium max-w-2xl text-slate-100 drop-shadow-md mb-10">
+            <p className="text-lg md:text-2xl font-medium max-w-2xl text-slate-100 drop-shadow-md mb-8 md:mb-10 px-4 md:px-0">
                 Curated journeys for the modern explorer. Experience the world in unparalled luxury.
             </p>
             
-            <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 w-full max-w-4xl flex items-center gap-2 shadow-2xl">
-                <div className="flex-1 bg-white rounded-xl flex items-center px-6 py-4">
-                    <Globe className="text-gray-400 mr-3" />
+            <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 w-full max-w-4xl flex flex-col md:flex-row items-center gap-2 shadow-2xl">
+                <div className="w-full md:flex-1 bg-white rounded-xl flex items-center px-4 md:px-6 py-3 md:py-4">
+                    <Globe className="text-gray-400 mr-2 md:mr-3" size={20} />
                     <input 
                         type="text" 
-                        placeholder="Where do you want to go?" 
+                        placeholder="Destination..." 
                         value={search}
                         onChange={e => setSearch(e.target.value)}
-                        className="bg-transparent outline-none w-full font-bold text-slate-900 placeholder-slate-400"
+                        className="bg-transparent outline-none w-full font-bold text-slate-900 placeholder-slate-400 text-sm md:text-base"
                     />
                 </div>
                 <div className="bg-white rounded-xl flex items-center px-6 py-4 w-48 border-l border-slate-100 hidden md:flex">
                      <input type="date" className="bg-transparent outline-none w-full font-bold text-slate-900" />
                 </div>
-                <button onClick={() => alert('Searching best properties...')} className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-4 px-10 rounded-xl transition-all shadow-lg shadow-sky-500/30">
+                <button onClick={() => alert('Searching best properties...')} className="w-full md:w-auto bg-sky-500 hover:bg-sky-600 text-white font-black uppercase tracking-widest py-3 md:py-4 px-10 rounded-xl transition-all shadow-lg shadow-sky-500/30 text-xs md:text-base">
                     Explore
                 </button>
             </div>

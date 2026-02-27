@@ -33,12 +33,12 @@ export default function PayFlow() {
       <div className="md:pl-20 max-w-7xl mx-auto p-6 md:p-10 pb-24">
         
         {/* Header */}
-        <header className="flex justify-between items-center mb-10">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
             <div>
-                <h1 className="text-3xl font-black mb-1">Total Balance</h1>
-                <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">$24,562.00</span>
-                    <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded-lg text-sm font-bold flex items-center gap-1">
+                <h1 className="text-xl md:text-3xl font-black mb-1 opacity-60 uppercase tracking-widest text-slate-400">Total Balance</h1>
+                <div className="flex flex-wrap items-baseline gap-2 md:gap-4">
+                    <span className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">$24,562.00</span>
+                    <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
                         <ArrowUpRight size={14} /> +2.4%
                     </span>
                 </div>
@@ -62,22 +62,22 @@ export default function PayFlow() {
             <div className="lg:col-span-2 space-y-8">
                 
                 {/* Cards Carousel */}
-                <div className="relative overflow-hidden h-64 rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 p-8 text-white shadow-2xl shadow-purple-900/50 group">
-                    <div className="absolute top-0 right-0 p-8 opacity-20"><CreditCard size={120} /></div>
-                    <div className="flex justify-between items-start mb-12">
-                         <div className="bg-white/20 backdrop-blur-md px-4 py-2 rounded-lg font-mono text-sm tracking-widest">PAYFLOW BLACK</div>
-                         <Shield className="opacity-60" />
+                 <div className="relative overflow-hidden h-64 rounded-3xl bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 p-6 md:p-8 text-white shadow-2xl shadow-purple-900/50 group">
+                    <div className="absolute top-0 right-0 p-6 md:p-8 opacity-20"><CreditCard size={120} className="md:size-[120px] size-[80px]" /></div>
+                    <div className="flex justify-between items-start mb-10 md:mb-12">
+                         <div className="bg-white/20 backdrop-blur-md px-3 md:px-4 py-1.5 md:py-2 rounded-lg font-mono text-[10px] md:text-sm tracking-widest">PAYFLOW BLACK</div>
+                         <Shield className="opacity-60" size={20} />
                     </div>
                     <div>
-                        <p className="font-mono text-2xl tracking-widest mb-2 opacity-90">**** **** **** 4289</p>
+                        <p className="font-mono text-xl md:text-2xl tracking-widest mb-2 opacity-90">**** **** **** 4289</p>
                         <div className="flex justify-between items-end">
                             <div>
-                                <p className="text-xs opacity-60 uppercase mb-1">Card Holder</p>
-                                <p className="font-bold tracking-wide">ALEXANDER MITCHELL</p>
+                                <p className="text-[10px] opacity-60 uppercase mb-1">Card Holder</p>
+                                <p className="font-bold tracking-wide text-sm md:text-base">ALEXANDER MITCHELL</p>
                             </div>
                             <div className="text-right">
-                                <p className="text-xs opacity-60 uppercase mb-1">Expires</p>
-                                <p className="font-bold">09/28</p>
+                                <p className="text-[10px] opacity-60 uppercase mb-1">Expires</p>
+                                <p className="font-bold text-sm md:text-base">09/28</p>
                             </div>
                         </div>
                     </div>

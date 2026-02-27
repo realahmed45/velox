@@ -169,22 +169,21 @@ export default function Pricing() {
             <span className="text-[11px] font-black uppercase tracking-[0.5em] text-black/60">Investment Infrastructure</span>
           </div>
           
-          <h1 className="text-5xl md:text-[140px] font-black text-black leading-[0.9] md:leading-[0.85] tracking-tighter italic uppercase mb-16 px-4 md:px-0">
+          <h1 className="text-4xl md:text-[140px] font-black text-black leading-[1] md:leading-[0.85] tracking-tighter italic uppercase mb-12 md:mb-16 px-4 md:px-0">
             PRICING<br/><span className="text-[#FF6B00] not-italic">PROTOCOLS</span>
           </h1>
 
-          {/* Category Toggle */}
-          <div className="flex justify-center mb-24">
-            <div className="inline-flex p-1.5 bg-black rounded-sm">
+          <div className="flex justify-center mb-16 md:mb-24 px-4">
+            <div className="flex flex-col sm:flex-row p-1.5 bg-black rounded-sm w-full max-w-lg sm:w-auto">
               <button 
                 onClick={() => setActiveCategory("automation")}
-                className={`flex items-center gap-3 px-10 py-4 font-black uppercase tracking-widest text-xs transition-all ${activeCategory === "automation" ? 'bg-[#FF6B00] text-white shadow-lg' : 'text-gray-500 hover:text-white'}`}
+                className={`flex items-center justify-center gap-3 px-6 md:px-10 py-4 font-black uppercase tracking-widest text-[10px] md:text-xs transition-all ${activeCategory === "automation" ? 'bg-[#FF6B00] text-white shadow-lg' : 'text-gray-500 hover:text-white'}`}
               >
                 <Bot size={16} /> Automation Ops
               </button>
               <button 
                 onClick={() => setActiveCategory("web")}
-                className={`flex items-center gap-3 px-10 py-4 font-black uppercase tracking-widest text-xs transition-all ${activeCategory === "web" ? 'bg-[#FF6B00] text-white shadow-lg' : 'text-gray-500 hover:text-white'}`}
+                className={`flex items-center justify-center gap-3 px-6 md:px-10 py-4 font-black uppercase tracking-widest text-[10px] md:text-xs transition-all ${activeCategory === "web" ? 'bg-[#FF6B00] text-white shadow-lg' : 'text-gray-500 hover:text-white'}`}
               >
                 <Globe size={16} /> Web Artifacts
               </button>
@@ -200,7 +199,7 @@ export default function Pricing() {
             {currentPricing.map((item, i) => (
               <div 
                 key={i} 
-                className={`relative p-12 rounded-sm border-2 transition-all duration-500 group flex flex-col ${item.popular ? 'bg-black border-black text-white shadow-2xl scale-105 z-10' : 'bg-white border-black/5 text-black hover:border-[#FF6B00]/30'}`}
+                className={`relative p-8 md:p-12 rounded-sm border-2 transition-all duration-500 group flex flex-col ${item.popular ? 'bg-black border-black text-white shadow-2xl lg:scale-105 z-10 mx-2 lg:mx-0' : 'bg-white border-black/5 text-black hover:border-[#FF6B00]/30'}`}
               >
                 {item.popular && (
                   <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-6 py-2 bg-[#FF6B00] text-white text-[10px] font-black uppercase tracking-[0.3em] rounded-full">
@@ -215,12 +214,12 @@ export default function Pricing() {
                 
                 <div className="mb-12">
                   <div className="flex flex-col gap-1">
-                    <div className="flex items-baseline gap-3">
-                      <span className="text-6xl font-black italic">{item.setup}</span>
+                    <div className="flex flex-wrap items-baseline gap-3">
+                      <span className="text-5xl md:text-6xl font-black italic">{item.setup}</span>
                       <span className={`text-[10px] font-black uppercase tracking-[0.2em] border px-2 py-1 ${item.popular ? 'border-[#FF6B00] text-[#FF6B00]' : 'border-black text-black'}`}>Setup</span>
                     </div>
-                    <div className="flex items-baseline gap-2 mt-4">
-                      <span className={`text-2xl font-black italic ${item.popular ? 'text-[#FF6B00]' : 'text-black'}`}>{item.monthly}</span>
+                    <div className="flex items-baseline gap-2 mt-4 md:mt-6">
+                      <span className={`text-xl md:text-2xl font-black italic ${item.popular ? 'text-[#FF6B00]' : 'text-black'}`}>{item.monthly}</span>
                       <span className={`text-[10px] font-black uppercase tracking-[0.2em] opacity-60 ${item.popular ? 'text-white' : 'text-black'}`}>/ Maintenance</span>
                     </div>
                   </div>

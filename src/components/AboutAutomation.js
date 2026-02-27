@@ -105,11 +105,11 @@ export default function AboutAutomation() {
                 <Sparkles size={14} className="text-[#FF6B00]" />
                 <span className="text-[11px] font-black uppercase tracking-[0.5em] text-black/60">The Strategic Blueprint</span>
               </div>
-              <h1 className="text-5xl md:text-[110px] font-black text-black leading-[0.9] lg:leading-[0.85] tracking-tighter uppercase italic mb-8 md:mb-10">
+              <h1 className="text-4xl md:text-[110px] font-black text-black leading-[1] md:leading-[0.85] tracking-tighter uppercase italic mb-8 md:mb-10 px-2">
                 DECODING<br/>
                 <span className="text-[#FF6B00] not-italic">AUTOMATION</span>
               </h1>
-              <p className="text-lg md:text-2xl text-gray-500 font-medium max-w-xl leading-relaxed mb-10 md:mb-12 italic mx-auto lg:mx-0">
+              <p className="text-lg md:text-2xl text-gray-500 font-medium max-w-xl leading-relaxed mb-10 md:mb-12 italic mx-auto lg:mx-0 px-4">
                 From basic triggers to autonomous neural systems—learn how we engineer the systems that liberate your time.
               </p>
               <a href={whatsappLink} className="px-10 md:px-12 py-5 md:py-6 bg-black text-white font-black uppercase tracking-widest text-xs rounded-sm hover:bg-[#FF6B00] transition-all inline-flex items-center gap-4 justify-center">
@@ -133,18 +133,18 @@ export default function AboutAutomation() {
       {/* The 4-Level Roadmap */}
       <section className="py-48 px-6 md:px-12 bg-black text-white relative">
         <div className="max-w-[1400px] mx-auto">
-          <div className="text-center mb-32">
-            <h2 className="text-5xl md:text-8xl font-black italic tracking-tighter uppercase mb-6">THE NEURAL <span className="text-[#FF6B00] not-italic">LADDER.</span></h2>
-            <p className="text-gray-400 text-xl font-medium tracking-widest uppercase">The path from manual labor to autonomous dominance.</p>
+          <div className="text-center mb-20 md:mb-32">
+            <h2 className="text-4xl md:text-8xl font-black italic tracking-tighter uppercase mb-6 leading-[1] md:leading-none">THE NEURAL <span className="text-[#FF6B00] not-italic">LADDER.</span></h2>
+            <p className="text-gray-400 text-sm md:text-xl font-medium tracking-widest uppercase px-4">The path from manual labor to autonomous dominance.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
              {levels.map((lvl, i) => (
-               <div key={i} className="group p-10 bg-white/5 border border-white/5 hover:border-[#FF6B00]/30 transition-all duration-700 relative overflow-hidden">
-                  <div className="absolute -right-4 -top-4 text-8xl font-black text-white/5 italic">{i+1}</div>
-                  <div className="mb-10 group-hover:scale-110 transition-transform duration-500">{lvl.icon}</div>
-                  <h3 className="text-2xl font-black italic uppercase mb-6 tracking-tight">{lvl.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-10 font-medium">{lvl.desc}</p>
+               <div key={i} className="group p-8 md:p-10 bg-white/5 border border-white/5 hover:border-[#FF6B00]/30 transition-all duration-700 relative overflow-hidden">
+                  <div className="absolute -right-4 -top-4 text-7xl md:text-8xl font-black text-white/5 italic">{i+1}</div>
+                  <div className="mb-8 md:mb-10 group-hover:scale-110 transition-transform duration-500">{lvl.icon}</div>
+                  <h3 className="text-xl md:text-2xl font-black italic uppercase mb-4 md:mb-6 tracking-tight">{lvl.title}</h3>
+                  <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-8 md:mb-10 font-medium">{lvl.desc}</p>
                   <div className="flex flex-wrap gap-2">
                      {lvl.concepts.map((c, idx) => (
                        <span key={idx} className="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-white/5 text-[#FF6B00]">{c}</span>
@@ -160,7 +160,7 @@ export default function AboutAutomation() {
       <section className="py-48 px-6 md:px-12 bg-white text-black">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
            <div>
-              <h2 className="text-5xl md:text-8xl font-black italic tracking-tighter uppercase mb-10 leading-[0.9]">HOW WE TURN<br/><span className="text-[#FF6B00] not-italic">ANY BUSINESS</span><br/>AROUND.</h2>
+              <h2 className="text-4xl md:text-8xl font-black italic tracking-tighter uppercase mb-10 leading-[1] md:leading-[0.9]">HOW WE TURN<br/><span className="text-[#FF6B00] not-italic">ANY BUSINESS</span><br/>AROUND.</h2>
               <div className="space-y-12 mt-20">
                  {[
                    { title: "Time Redemption", desc: "Automating lead management and customer support can save an average of 15-20 engineering hours per week." },
@@ -177,21 +177,21 @@ export default function AboutAutomation() {
                  ))}
               </div>
            </div>
-           <div className="p-12 bg-black text-white rounded-sm relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF6B00]/10 blur-[80px]" />
-              <h3 className="text-3xl font-black italic uppercase mb-12 text-[#FF6B00]">Strategic Glossary</h3>
-              <div className="space-y-8">
-                 {glossary.map((it, i) => (
-                   <div key={i} className="border-b border-white/5 pb-6 last:border-0 group cursor-help">
-                      <div className="flex items-center gap-4 mb-2">
-                         <span className="text-sm font-black uppercase tracking-[0.3em] text-white group-hover:text-[#FF6B00] transition-colors">{it.term}</span>
-                         <ArrowRight size={12} className="text-[#FF6B00] opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0" />
-                      </div>
-                      <p className="text-[10px] font-bold text-gray-500 uppercase tracking-widest leading-relaxed">{it.def}</p>
-                   </div>
-                 ))}
-              </div>
-           </div>
+            <div className="p-8 md:p-12 bg-black text-white rounded-sm relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF6B00]/10 blur-[80px]" />
+               <h3 className="text-2xl md:text-3xl font-black italic uppercase mb-10 md:mb-12 text-[#FF6B00]">Strategic Glossary</h3>
+               <div className="space-y-6 md:space-y-8">
+                  {glossary.map((it, i) => (
+                    <div key={i} className="border-b border-white/5 pb-5 md:pb-6 last:border-0 group cursor-help">
+                       <div className="flex items-center gap-4 mb-2">
+                          <span className="text-xs md:text-sm font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-white group-hover:text-[#FF6B00] transition-colors">{it.term}</span>
+                          <ArrowRight size={12} className="text-[#FF6B00] opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0" />
+                       </div>
+                       <p className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-widest leading-relaxed">{it.def}</p>
+                    </div>
+                  ))}
+               </div>
+            </div>
         </div>
       </section>
 
@@ -199,7 +199,7 @@ export default function AboutAutomation() {
       <section className="py-48 bg-black relative overflow-hidden text-center">
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#FF6B00]/5 rounded-full blur-[150px]" />
          <div className="relative z-10 max-w-4xl mx-auto px-6">
-            <h2 className="text-6xl md:text-[160px] font-black text-white italic tracking-tighter leading-none mb-12 uppercase">
+            <h2 className="text-5xl md:text-[160px] font-black text-white italic tracking-tighter leading-none mb-10 md:mb-12 uppercase">
               BECOME<br/><span className="text-[#FF6B00] not-italic">EXPERT.</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-400 font-medium mb-16 uppercase tracking-[0.2em]">Ready to out-engineer your market?</p>

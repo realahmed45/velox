@@ -25,11 +25,11 @@ export default function UrbanNest() {
   return (
     <div className="bg-gray-50 min-h-screen font-sans selection:bg-emerald-200">
       {/* Hero Section */}
-      <div className="relative h-[500px] overflow-hidden">
+      <div className="relative h-[400px] md:h-[500px] overflow-hidden">
         <div className="absolute inset-0 bg-black/40 z-10" />
         <img 
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" 
-            className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-1000 scale-105" // Subtle zoom simulation
+            className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-1000 scale-105"
             alt="Hero Luxury Home"
         />
         
@@ -42,19 +42,19 @@ export default function UrbanNest() {
         </div>
 
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-            <h1 className="text-5xl md:text-7xl font-black text-white mb-6 drop-shadow-2xl tracking-tighter">
+            <h1 className="text-4xl md:text-7xl font-black text-white mb-6 drop-shadow-2xl tracking-tighter uppercase px-2">
                 Find Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Sanctuary</span>
             </h1>
-            <div className="bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20 w-full max-w-3xl flex flex-col md:flex-row gap-2 shadow-2xl">
-                <div className="flex-1 bg-white rounded-xl flex items-center px-6 py-4">
-                    <Search className="text-gray-400 mr-3" />
+            <div className="bg-white/10 backdrop-blur-md p-2 md:p-2 rounded-2xl border border-white/20 w-full max-w-3xl flex flex-col md:flex-row gap-2 shadow-2xl">
+                <div className="flex-1 bg-white rounded-xl flex items-center px-4 md:px-6 py-3 md:py-4">
+                    <Search className="text-gray-400 mr-2 md:mr-3" size={20} />
                     <input 
                         type="text" 
-                        placeholder="Search by city, neighborhood, or address..." 
-                        className="bg-transparent outline-none w-full font-medium text-gray-900 placeholder-gray-400"
+                        placeholder="Search locations..." 
+                        className="bg-transparent outline-none w-full font-medium text-gray-900 placeholder-gray-400 text-sm md:text-base"
                     />
                 </div>
-                <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-xl transition-all shadow-lg shadow-emerald-500/30">
+                <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 md:py-4 px-8 md:px-10 rounded-xl transition-all shadow-lg shadow-emerald-500/30 text-sm md:text-base">
                     Search
                 </button>
             </div>
@@ -199,11 +199,11 @@ export default function UrbanNest() {
 
                 {/* Info Column */}
                 <div className="w-full md:w-1/2 p-8 lg:p-12 overflow-y-auto bg-gray-50 h-full">
-                    <div className="flex items-center justify-between mb-8">
-                        <span className="text-3xl font-black text-emerald-600">${(selectedProperty.price/1000000).toFixed(2)} Million</span>
-                        <div className="flex items-center gap-1 text-yellow-500 font-bold">
-                            <Star fill="currentColor" size={20} />
-                            4.9 (128 reviews)
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
+                        <span className="text-2xl md:text-3xl font-black text-emerald-600">${(selectedProperty.price/1000000).toFixed(2)}M</span>
+                        <div className="flex items-center gap-1 text-yellow-500 font-bold bg-white px-3 py-1 rounded-full border border-gray-100 shadow-sm">
+                            <Star fill="currentColor" size={16} />
+                            4.9 (128)
                         </div>
                     </div>
 

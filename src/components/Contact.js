@@ -65,7 +65,7 @@ export default function Contact() {
             {/* Left Side: Text & Info */}
             <div>
               <div className="text-[#FF6B00] font-black text-[12px] uppercase tracking-[0.6em] mb-8">Direct Access Terminal</div>
-              <h1 className="text-6xl md:text-[120px] font-black tracking-tighter leading-[0.85] italic uppercase mb-12 text-black">
+              <h1 className="text-5xl md:text-[120px] font-black tracking-tighter leading-[1] md:leading-[0.85] italic uppercase mb-8 md:mb-12 text-black px-2 md:px-0">
                  INITIATE<br/><span className="text-[#FF6B00]">COLLAB</span>
               </h1>
               <p className="text-2xl text-gray-600 max-w-xl font-medium leading-relaxed mb-16 italic uppercase tracking-wider">
@@ -105,10 +105,10 @@ export default function Contact() {
               </div>
 
               {/* Social Channels */}
-              <div className="mt-24 flex items-center gap-10">
-                <Link to="#" className="text-gray-500 hover:text-white transition-colors"><Instagram size={24}/></Link>
-                <Link to="#" className="text-gray-500 hover:text-white transition-colors"><Linkedin size={24}/></Link>
-                <Link to="#" className="text-gray-500 hover:text-white transition-colors"><Twitter size={24}/></Link>
+              <div className="mt-16 md:mt-24 flex items-center justify-center lg:justify-start gap-8 md:gap-10">
+                <Link to="#" className="text-gray-500 hover:text-white transition-colors"><Instagram size={20}/></Link>
+                <Link to="#" className="text-gray-500 hover:text-white transition-colors"><Linkedin size={20}/></Link>
+                <Link to="#" className="text-gray-500 hover:text-white transition-colors"><Twitter size={20}/></Link>
               </div>
             </div>
 
@@ -132,20 +132,20 @@ export default function Contact() {
                  </div>
                ) : (
                  <form onSubmit={handleSubmit} className="relative z-10 space-y-10">
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                       <div className="space-y-4">
                         <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">Entity Name</label>
-                        <input required type="text" placeholder="e.g. Stark Industries" className="w-full bg-white/5 border border-white/10 p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none" />
+                        <input required type="text" placeholder="e.g. Stark Industries" className="w-full bg-white/5 border border-white/10 p-4 md:p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none" />
                       </div>
                       <div className="space-y-4">
                         <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">Communication Channel</label>
-                        <input required type="email" placeholder="email@address.com" className="w-full bg-white/5 border border-white/10 p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none" />
+                        <input required type="email" placeholder="email@address.com" className="w-full bg-white/5 border border-white/10 p-4 md:p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none" />
                       </div>
                    </div>
 
                    <div className="space-y-6">
                       <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">Project Scope</label>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
                          {[
                            { id: "Autonomous AI Infrastructure", icon: <Cpu size={16} /> },
                            { id: "High-Performance Web Ecosystem", icon: <Globe size={16} /> },
@@ -156,12 +156,12 @@ export default function Contact() {
                              key={scope.id}
                              type="button"
                              onClick={() => setSelectedScope(scope.id)}
-                             className={`flex items-center gap-4 p-5 border-2 transition-all duration-300 rounded-sm text-left group ${selectedScope === scope.id ? 'bg-[#FF6B00]/10 border-[#FF6B00] shadow-[0_0_20px_rgba(255,107,0,0.2)]' : 'bg-white/5 border-white/10 hover:border-white/30'}`}
+                             className={`flex items-center gap-3 md:gap-4 p-4 md:p-5 border-2 transition-all duration-300 rounded-sm text-left group ${selectedScope === scope.id ? 'bg-[#FF6B00]/10 border-[#FF6B00] shadow-[0_0_20px_rgba(255,107,0,0.2)]' : 'bg-white/5 border-white/10 hover:border-white/30'}`}
                            >
                              <div className={`p-2 rounded-full transition-colors ${selectedScope === scope.id ? 'bg-[#FF6B00] text-white' : 'bg-white/5 text-gray-500 group-hover:text-white'}`}>
                                {scope.icon}
                              </div>
-                             <span className={`text-[11px] font-black uppercase tracking-widest ${selectedScope === scope.id ? 'text-white' : 'text-gray-400 group-hover:text-white'}`}>
+                             <span className={`text-[9px] md:text-[11px] font-black uppercase tracking-widest ${selectedScope === scope.id ? 'text-white' : 'text-gray-400 group-hover:text-white'}`}>
                                {scope.id}
                              </span>
                            </button>
