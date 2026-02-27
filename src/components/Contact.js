@@ -67,43 +67,43 @@ export default function Contact() {
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             {/* Left Side: Text & Info */}
-            <div>
+            <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
               <div className="text-[#FF6B00] font-black text-[10px] sm:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.6em] mb-6 sm:mb-8">Direct Access Terminal</div>
               <h1 className="text-4xl sm:text-6xl md:text-[120px] font-black tracking-tighter leading-[1] md:leading-[0.85] italic uppercase mb-6 sm:mb-12 text-black px-1 sm:px-0">
                  INITIATE<br/><span className="text-[#FF6B00]">COLLAB</span>
               </h1>
-              <p className="text-lg sm:text-2xl text-gray-600 max-w-xl font-medium leading-relaxed mb-10 sm:mb-16 italic uppercase tracking-wider">
+              <p className="text-base sm:text-2xl text-gray-600 max-w-xl font-medium leading-relaxed mb-10 sm:mb-16 italic uppercase tracking-wider">
                 Our engineers are ready to deploy bespoke <span className="text-black font-bold">Neural Units</span> and <span className="text-black font-bold">Web Ecosystems</span>.
               </p>
 
-              <div className="space-y-12">
-                <div className="flex items-start gap-8">
-                  <div className="p-5 bg-white/5 rounded-sm text-[#FF6B00]">
-                    <Mail size={32} />
+              <div className="space-y-10 sm:space-y-12 w-full flex flex-col items-center lg:items-start">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8 text-center sm:text-left">
+                  <div className="p-4 sm:p-5 bg-black/5 rounded-sm text-[#FF6B00]">
+                    <Mail size={24} className="sm:size-[32px]" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Electronic Mail</div>
-                    <div className="text-2xl font-black italic uppercase">velox.operations09@gmail.com</div>
+                    <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1 sm:mb-2">Electronic Mail</div>
+                    <div className="text-base xs:text-lg sm:text-2xl font-black italic uppercase break-all sm:break-normal">velox.operations09@gmail.com</div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8 text-center sm:text-left">
+                  <div className="p-4 sm:p-5 bg-black/5 rounded-sm text-[#FF6B00]">
+                    <Phone size={24} className="sm:size-[32px]" />
+                  </div>
+                  <div>
+                    <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-gray-500 mb-1 sm:mb-2">Neural Link (WhatsApp)</div>
+                    <div className="text-xl sm:text-2xl font-black italic uppercase">+92 332 9945014</div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-8">
-                  <div className="p-5 bg-white/5 rounded-sm text-[#FF6B00]">
-                    <Phone size={32} />
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-8 text-center sm:text-left">
+                  <div className="p-4 sm:p-5 bg-black/5 rounded-sm text-[#FF6B00]">
+                    <MessageSquare size={24} className="sm:size-[32px]" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Neural Link (WhatsApp)</div>
-                    <div className="text-2xl font-black italic uppercase">+92 332 9945014</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-8">
-                  <div className="p-5 bg-white/5 rounded-sm text-[#FF6B00]">
-                    <MessageSquare size={32} />
-                  </div>
-                  <div>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-gray-600 mb-2">Instant Response</div>
-                    <a href={whatsappLink} className="text-xl font-black uppercase text-[#FF6B00] hover:underline decoration-2 underline-offset-8">Open Secure Chat</a>
+                    <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-gray-600 mb-1 sm:mb-2">Instant Response</div>
+                    <a href={whatsappLink} className="text-lg sm:text-xl font-black uppercase text-[#FF6B00] hover:underline decoration-2 underline-offset-8">Open Secure Chat</a>
                   </div>
                 </div>
               </div>
