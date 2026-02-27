@@ -9,6 +9,7 @@ import AiSolutions from "./components/AiSolutions";
 import Contact from "./components/Contact";
 import Pricing from './components/Pricing';
 import AboutAutomation from './components/AboutAutomation';
+import WhatsAppFAB from './components/WhatsAppFAB';
 import EcommercePlatform from "./projects/EcommercePlatform";
 import SaasDashboard from "./projects/SaasDashboard";
 import {
@@ -46,6 +47,7 @@ function App() {
             <Route path="/projects/travel" element={<TravelAgency />} />
             <Route path="/projects/portfolio" element={<CreativePortfolio />} />
           </Routes>
+          <WhatsAppFAB />
         </Router>
       </HelmetProvider>
     </div>

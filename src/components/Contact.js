@@ -17,12 +17,24 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      scope: selectedScope,
+      brief: formData.get('brief')
+    };
+
     setFormState("sending");
+
+    // Construct WhatsApp Message
+    const message = `*New Strategic Inquiry from Velox*%0A%0A*Entity:* ${data.name}%0A*Channel:* ${data.email}%0A*Scope:* ${data.scope}%0A%0A*Strategic Brief:*%0A${data.brief}`;
+    const fullWhatsappLink = `${whatsappLink}?text=${message}`;
+
     setTimeout(() => {
       setFormState("success");
-      // Redirect to WhatsApp after success
-      window.open(whatsappLink, "_blank");
-    }, 2000);
+      window.open(fullWhatsappLink, "_blank");
+    }, 1500);
   };
 
   return (
@@ -139,11 +151,11 @@ export default function Contact() {
                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                       <div className="space-y-4">
                         <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">Entity Name</label>
-                        <input required type="text" placeholder="e.g. Stark Industries" className="w-full bg-white/5 border border-white/10 p-4 md:p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none" />
+                        <input name="name" required type="text" placeholder="e.g. Stark Industries" className="w-full bg-white/5 border border-white/10 p-4 md:p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none" />
                       </div>
                       <div className="space-y-4">
                         <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">Communication Channel</label>
-                        <input required type="email" placeholder="email@address.com" className="w-full bg-white/5 border border-white/10 p-4 md:p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none" />
+                        <input name="email" required type="email" placeholder="email@address.com" className="w-full bg-white/5 border border-white/10 p-4 md:p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none" />
                       </div>
                    </div>
 
@@ -175,7 +187,7 @@ export default function Contact() {
 
                    <div className="space-y-4">
                       <label className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500 ml-1">Strategic Brief</label>
-                      <textarea required rows="4" placeholder="How can we help you dominate?" className="w-full bg-white/5 border border-white/10 p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none resize-none" />
+                      <textarea name="brief" required rows="4" placeholder="How can we help you dominate?" className="w-full bg-white/5 border border-white/10 p-5 font-bold focus:border-[#FF6B00] focus:bg-[#FF6B00]/5 transition-all outline-none resize-none" />
                    </div>
 
                    <button 
