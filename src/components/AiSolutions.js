@@ -175,12 +175,12 @@ export default function AiSolutions() {
       {/* Exhaustive Catalog Section */}
       <section className="py-32 px-6 bg-[#080808]">
          <div className="max-w-[1400px] mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-10 mb-20 md:mb-24 text-white">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-10 mb-16 md:mb-24 text-white">
                <div className="max-w-3xl">
-                  <h2 className="text-4xl md:text-8xl font-black tracking-tighter italic uppercase leading-none mb-6 md:mb-8">THE SPECTRUM OF<br/><span className="text-[#FF6B00] not-italic">AUTOMATION</span></h2>
-                  <p className="text-gray-400 text-lg md:text-xl font-medium max-w-xl uppercase tracking-widest leading-relaxed">From n8n agentic workflows to full-scale LLM integrations.</p>
+                  <h2 className="text-3xl sm:text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none mb-4 md:mb-8">THE SPECTRUM OF<br/><span className="text-[#FF6B00] not-italic">AUTOMATION</span></h2>
+                  <p className="text-gray-400 text-sm sm:text-lg md:text-xl font-medium max-w-xl uppercase tracking-widest leading-relaxed">From n8n agentic workflows to full-scale LLM integrations.</p>
                </div>
-               <div className="px-8 md:px-10 py-4 md:py-5 border border-white/10 bg-white/5 text-[10px] font-black uppercase tracking-[0.4em] text-[#FF6B00]">Unit 01: Core Infra</div>
+               <div className="px-6 md:px-10 py-3 md:py-5 border border-white/10 bg-white/5 text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#FF6B00]">Unit 01: Core Infra</div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
@@ -245,11 +245,11 @@ export default function AiSolutions() {
             </div>
 
             {/* Step 3: Action */}
-            <div className="glass-card p-12 text-center relative">
+            <div className="glass-card p-8 sm:p-12 text-center relative">
                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-[#FF6B00] text-white flex items-center justify-center font-black rounded-full shadow-lg shadow-[#FF6B00]/20">03</div>
-               <div className="text-[#FF6B00] mb-8 flex justify-center"><Zap size={48} /></div>
-               <h3 className="text-2xl font-black uppercase italic mb-6">Autonomous Action</h3>
-               <p className="text-gray-400 font-medium leading-relaxed">Appointments booked in CRM, invoices sent, or hyper-personalized responses delivered instantly.</p>
+               <div className="text-[#FF6B00] mb-6 sm:mb-8 flex justify-center"><Zap size={40} className="sm:size-[48px]" /></div>
+               <h3 className="text-xl sm:text-2xl font-black uppercase italic mb-4 sm:mb-6">Autonomous Action</h3>
+               <p className="text-gray-400 text-sm sm:text-base font-medium leading-relaxed">Appointments booked in CRM, invoices sent, or hyper-personalized responses delivered instantly.</p>
             </div>
           </div>
 
@@ -343,13 +343,15 @@ export default function AiSolutions() {
       </section>
 
       {/* CTA Footer */}
-      <section className="py-48 px-6 bg-[#FF6B00] text-white text-center relative overflow-hidden">
+      <section className="py-24 md:py-48 px-6 bg-[#FF6B00] text-white text-center relative overflow-hidden">
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-white/10 rounded-full blur-[100px] animate-pulse" />
          <div className="relative z-10 max-w-4xl mx-auto">
-            <h2 className="text-7xl md:text-[180px] font-black italic tracking-tighter leading-none mb-12 uppercase">CAPTURE<br/>THE MARKET.</h2>
-            <p className="text-2xl font-bold uppercase tracking-[0.2em] mb-16">The future is autonomous. Are you in?</p>
-            <Link to="/pricing" className="px-16 py-6 border-2 border-[#FF6B00] text-[#FF6B00] font-black uppercase tracking-widest hover:bg-[#FF6B00] hover:text-white transition-all rounded-sm">View Pricing</Link>
-            <Link to="/contact" className="px-16 py-6 bg-white text-black font-black uppercase tracking-widest hover:bg-[#FF6B00] hover:text-white transition-all rounded-sm">Reach Out</Link>
+            <h2 className="text-4xl sm:text-7xl md:text-[180px] font-black italic tracking-tighter leading-none mb-8 md:mb-12 uppercase">CAPTURE<br/>THE MARKET.</h2>
+            <p className="text-lg sm:text-2xl font-bold uppercase tracking-[0.1em] sm:tracking-[0.2em] mb-12 md:mb-16">The future is autonomous. Are you in?</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+               <Link to="/pricing" className="w-full sm:w-auto px-12 sm:px-16 py-5 sm:py-6 border-2 border-white text-white font-black uppercase tracking-widest hover:bg-white hover:text-[#FF6B00] transition-all rounded-sm text-sm sm:text-base">View Pricing</Link>
+               <Link to="/contact" className="w-full sm:w-auto px-12 sm:px-16 py-5 sm:py-6 bg-white text-black font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all rounded-sm text-sm sm:text-base">Reach Out</Link>
+            </div>
          </div>
       </section>
 

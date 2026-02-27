@@ -68,11 +68,11 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             {/* Left Side: Text & Info */}
             <div>
-              <div className="text-[#FF6B00] font-black text-[12px] uppercase tracking-[0.6em] mb-8">Direct Access Terminal</div>
-              <h1 className="text-5xl md:text-[120px] font-black tracking-tighter leading-[1] md:leading-[0.85] italic uppercase mb-8 md:mb-12 text-black px-2 md:px-0">
+              <div className="text-[#FF6B00] font-black text-[10px] sm:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.6em] mb-6 sm:mb-8">Direct Access Terminal</div>
+              <h1 className="text-4xl sm:text-6xl md:text-[120px] font-black tracking-tighter leading-[1] md:leading-[0.85] italic uppercase mb-6 sm:mb-12 text-black px-1 sm:px-0">
                  INITIATE<br/><span className="text-[#FF6B00]">COLLAB</span>
               </h1>
-              <p className="text-2xl text-gray-600 max-w-xl font-medium leading-relaxed mb-16 italic uppercase tracking-wider">
+              <p className="text-lg sm:text-2xl text-gray-600 max-w-xl font-medium leading-relaxed mb-10 sm:mb-16 italic uppercase tracking-wider">
                 Our engineers are ready to deploy bespoke <span className="text-black font-bold">Neural Units</span> and <span className="text-black font-bold">Web Ecosystems</span>.
               </p>
 
@@ -180,7 +180,7 @@ export default function Contact() {
 
                    <button 
                     disabled={formState === "sending"}
-                    className="w-full py-8 bg-[#FF6B00] text-white font-black uppercase tracking-[0.4em] hover:bg-white hover:text-black transition-all duration-700 disabled:opacity-50 flex items-center justify-center gap-4 text-lg"
+                    className="w-full py-6 sm:py-8 bg-[#FF6B00] text-white font-black uppercase tracking-[0.2em] sm:tracking-[0.4em] hover:bg-black hover:text-white transition-all duration-700 disabled:opacity-50 flex items-center justify-center gap-4 text-base sm:text-lg rounded-sm"
                    >
                      {formState === "sending" ? "TRANSMITTING..." : "REACH OUT"}
                      <ArrowRight size={20} />
