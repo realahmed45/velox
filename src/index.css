@@ -2,16 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  :root {
+    --matte-black: #050505;
+    --velox-orange: #FF6B00;
+    --velox-gold: #c5a358;
+    --velox-gray: #1a1a1a;
+    --velox-white: #ffffff;
+  }
+
+  body {
+    @apply bg-white text-black antialiased;
+    font-size: 18px; /* High-res legibility */
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--matte-black);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #222;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.text-gradient-orange {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-[#FF6B00] to-white;
+}
+
+.glass-card {
+  @apply backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-sm;
+}
+
+.btn-orange {
+  @apply px-16 py-8 bg-[#FF6B00] text-white font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-500 rounded-sm inline-block text-lg shadow-2xl shadow-[#FF6B00]/20 active:scale-95 border-2 border-[#FF6B00];
+}
+
+.btn-black {
+  @apply px-16 py-8 bg-black text-white font-black uppercase tracking-widest hover:bg-[#FF6B00] hover:text-white transition-all duration-500 rounded-sm inline-block text-lg active:scale-95 border-2 border-black;
+}
+
+.btn-outline {
+  @apply px-16 py-8 border-2 border-black/20 text-black font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-500 rounded-sm inline-block text-lg active:scale-95;
+}
+
+.btn-outline-white {
+  @apply px-16 py-8 border-2 border-white/20 text-white font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-500 rounded-sm inline-block text-lg active:scale-95;
 }

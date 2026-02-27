@@ -1,4 +1,4 @@
-export const categories = ["All", "SaaS", "E-commerce", "Health", "Finance", "Lifestyle"];
+export const categories = ["All", "AI Automation", "SaaS", "E-commerce", "Health", "Finance", "Lifestyle"];
 
 export const projectsData = [
   {
@@ -120,5 +120,29 @@ export const projectsData = [
     componentPath: "/projects/restaurant",
     gradient: "from-red-700 to-rose-900",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80"
+  },
+  {
+    id: 11,
+    name: "NexusAI Support",
+    category: "AI Automation",
+    description: "Multilingual autonomous support agent for a Global 500 tech firm. Handles 85% of queries without human intervention.",
+    techStack: ["OpenAI API", "Pinecone", "LangChain", "Node.js"],
+    features: ["120+ Languages", "Context Memory", "CRM Sync", "Sentiment Analysis"],
+    metrics: ["85% Deflection", "4.8/5 CSAT"],
+    componentPath: "/",
+    gradient: "from-[#FF6B00] to-amber-700",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80"
+  },
+  {
+    id: 12,
+    name: "CogniSales Bot",
+    category: "AI Automation",
+    description: "Hyper-personalized lead outreach system that identifies and warms prospects through behavioral analysis.",
+    techStack: ["GPT-4", "Apollo.io", "SendGrid", "Python"],
+    features: ["Lead Scoring", "Auto-Personalization", "Meeting Booking", "A/B Testing"],
+    metrics: ["4.5x ROI", "65% Open Rate"],
+    componentPath: "/",
+    gradient: "from-purple-600 to-indigo-600",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80"
   }
 ];

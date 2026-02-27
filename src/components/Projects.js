@@ -1,286 +1,185 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, ExternalLink, Check, ArrowRight } from "lucide-react";
-import { projectsData, categories } from "../data/projectsData";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { ArrowLeft, ExternalLink, Zap, Code, Bot, LineChart, MessageSquare, Menu, X, ArrowRight } from "lucide-react";
+import { categories, projectsData } from "../data/projectsData";
 
 export default function Projects() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredCard, setHoveredCard] = useState(null);
-  const navigate = useNavigate();
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cursorX, setCursorX] = useState(0);
+  const [cursorY, setCursorY] = useState(0);
+  const whatsappLink = "https://wa.me/923329945014";
 
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projectsData
-      : projectsData.filter((project) => project.category === selectedCategory);
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setCursorX(e.clientX);
+      setCursorY(e.clientY);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
-  const handleProjectClick = (componentPath) => {
-    navigate(componentPath);
-  };
+  const filteredProjects = activeCategory === "all" || activeCategory === "All"
+    ? projectsData 
+    : projectsData.filter(p => p.category === activeCategory || (p.categories && p.categories.includes(activeCategory)));
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 via-white to-gray-100 min-h-screen">
+    <div className="bg-white min-h-screen text-black font-inter selection:bg-[#FF6B00]/30 selection:text-white">
       <style>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+        .custom-cursor {
+          position: fixed;
+          width: 8px;
+          height: 8px;
+          background: white;
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 9999;
+          transition: transform 0.15s ease-out;
         }
-
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-
         .project-card {
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          background: rgba(255, 255, 255, 0.01);
           transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-          cursor: pointer;
         }
-
         .project-card:hover {
-          transform: translateY(-16px);
+          background: rgba(255, 107, 0, 0.03);
+          border-color: rgba(255, 107, 0, 0.4);
+          transform: translateY(-10px);
+          box-shadow: 0 40px 80px rgba(255, 107, 0, 0.1);
         }
-
-        .badge-tech {
-          transition: all 0.3s ease;
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(30px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-
-        .badge-tech:hover {
-          transform: scale(1.15);
-        }
-
-        .gradient-shine {
-          position: relative;
-          overflow: hidden;
-        }
-
-        .gradient-shine::after {
-          content: '';
-          position: absolute;
-          top: -50%;
-          left: -50%;
-          width: 200%;
-          height: 200%;
-          background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-          transform: translateX(-100%);
-          transition: transform 0.6s;
-        }
-
-        .gradient-shine:hover::after {
-          transform: translateX(100%);
-        }
+        .animate-up { animation: fadeInUp 0.8s ease-out forwards; }
       `}</style>
 
-      {/* Navigation Header */}
-      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-gray-200 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-          <Link
-            to="/"
-            className="flex items-center gap-3 text-gray-800 hover:text-orange-500 transition-colors group"
-          >
-            <ArrowLeft
-              size={20}
-              className="group-hover:-translate-x-1 transition-transform"
-            />
-            <span className="font-bold uppercase tracking-wider text-sm">Back to Home</span>
+      <div className="custom-cursor hidden md:block" style={{ left: `${cursorX}px`, top: `${cursorY}px` }} />
+
+      {/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-black/5">
+        <div className="w-full px-6 md:px-12 py-6 flex justify-between items-center text-black">
+          <Link to="/" className="text-3xl font-black tracking-tighter uppercase italic">
+             VELOX<span className="text-[#FF6B00]">.</span>
           </Link>
-          <div className="flex items-center gap-3 text-3xl font-black tracking-tighter">
-            <img src="/logo.png" alt="Velox Logo" className="h-10 w-auto object-contain" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-orange-400 to-orange-500">
-              VELOX
-            </span>
+          <div className="hidden lg:flex items-center gap-10">
+            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">AI Solutions</Link>
+            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Automation Lab</Link>
+            <Link to="/projects" className="text-[14px] font-black uppercase tracking-[0.2em] text-[#FF6B00]">Web Artifacts</Link>
+            <Link to="/pricing" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Pricing</Link>
+            <Link to="/contact" className="px-10 py-5 bg-[#FF6B00] text-white font-black text-[14px] uppercase tracking-widest hover:bg-black transition-all rounded-sm shadow-xl shadow-[#FF6B00]/20">Reach Out</Link>
           </div>
+          <button className="lg:hidden text-black" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </nav>
 
-      {/* Main Content */}
-      <div className="pt-32 pb-24 px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <div className="mb-20 text-center">
-            <div className="inline-block mb-6 px-6 py-2 bg-orange-50 border border-orange-200 rounded-sm">
-              <span className="text-orange-600 font-black text-sm uppercase tracking-wider">Portfolio Showcase</span>
-            </div>
-            <h1
-              className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight text-gray-900"
-              style={{ animation: "fadeInUp 0.8s ease-out" }}
-            >
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Delivered</span> Projects
-            </h1>
-            <p
-              className="text-lg md:text-xl text-gray-600 mb-4 font-medium max-w-3xl mx-auto"
-              style={{ animation: "fadeInUp 0.8s ease-out 0.2s both" }}
-            >
-              Production-ready websites delivered in just 72 hours. Click any project to see it live.
-            </p>
-            <p
-              className="text-md text-orange-500 font-bold flex items-center justify-center gap-2"
-              style={{ animation: "fadeInUp 0.8s ease-out 0.3s both" }}
-            >
-              ✨ ...and many more! Contact us to see our full portfolio
-            </p>
-          </div>
+      {/* Mobile Menu */}
+      <div className={`fixed inset-0 z-[110] bg-black transition-all duration-700 flex flex-col items-center justify-center gap-10 ${mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
+          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>AI Solutions</Link>
+          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Automation Lab</Link>
+          <Link to="/projects" className="text-4xl font-black text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Web Artifacts</Link>
+          <Link to="/pricing" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
+          <Link to="/contact" className="px-16 py-6 bg-[#FF6B00] text-white font-black text-xl uppercase tracking-widest rounded-sm mt-10" onClick={() => setMobileMenuOpen(false)}>Reach Out</Link>
+          <button className="mt-20" onClick={() => setMobileMenuOpen(false)}>
+            <X size={40} className="text-gray-500 hover:text-white" />
+          </button>
+      </div>
 
-          {/* Category Filters */}
-          <div
-            className="flex flex-wrap justify-center gap-3 mb-16"
-            style={{ animation: "fadeInUp 0.8s ease-out 0.4s both" }}
-          >
-            {categories.map((category, index) => (
+      {/* Hero */}
+      <header className="relative pt-48 pb-20 px-6 md:px-12 overflow-hidden bg-white">
+        <div className="absolute inset-0 z-0 opacity-10 grayscale pointer-events-none">
+           <img src="/web_engineering_bg_2_1772122510458.png" className="w-full h-full object-cover" alt="Web Engineering Artifacts" />
+        </div>
+        <div className="max-w-[1400px] mx-auto relative z-10">
+          <div className="text-[#FF6B00] font-black text-[10px] uppercase tracking-[0.6em] mb-8 animate-up">Web & AI Exploration Zone</div>
+          <h1 className="text-5xl md:text-[140px] font-black tracking-tighter leading-[0.9] md:leading-[0.8] mb-12 italic uppercase animate-up text-black px-4 md:px-0">
+            ENGINEERED<br/>ARTIFACTS
+          </h1>
+          
+          <div className="flex flex-wrap gap-6 animate-up">
+            {categories.map((cat, i) => (
               <button
-                key={index}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-8 py-3 font-bold text-sm tracking-wider rounded-sm transition-all duration-300 ${
-                  selectedCategory === category
-                    ? "bg-gradient-to-r from-orange-400 to-orange-500 text-white shadow-xl shadow-orange-400/30 scale-105"
-                    : "bg-white text-gray-700 hover:bg-gray-100 shadow-md border border-gray-200 hover:border-orange-300"
+                key={i}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-12 py-6 text-[12px] font-black uppercase tracking-[0.4em] transition-all rounded-sm border-[3px] ${
+                  activeCategory === cat 
+                  ? 'bg-black text-white border-black shadow-xl shadow-black/20' 
+                  : 'bg-transparent text-black border-black/10 hover:border-black'
                 }`}
               >
-                {category}
+                {cat}
               </button>
             ))}
           </div>
+        </div>
+      </header>
 
-          {/* Projects Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project, index) => (
-              <div
-                key={project.id}
-                onClick={() => handleProjectClick(project.componentPath)}
-                className="project-card bg-white rounded-sm overflow-hidden shadow-xl hover:shadow-2xl border border-gray-200 gradient-shine"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out ${0.1 * index}s both`,
-                }}
-                onMouseEnter={() => setHoveredCard(project.id)}
-                onMouseLeave={() => setHoveredCard(null)}
-              >
-                {/* Project Header with Image */}
-                <div className="h-64 relative overflow-hidden group">
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url(${project.image})` }}
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-all duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-90" />
-                  
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <h3 className="text-3xl font-black text-white mb-3 drop-shadow-xl tracking-tight">
-                      {project.name}
-                    </h3>
-                    <span className="inline-block px-5 py-2 bg-white/10 backdrop-blur-md text-white border border-white/20 text-xs font-black uppercase tracking-widest rounded-sm shadow-lg">
-                      {project.category}
-                    </span>
-                  </div>
-                  
-                  {hoveredCard === project.id && (
-                    <div className="absolute top-5 right-5 bg-white text-black rounded-sm p-3 shadow-lg animate-in fade-in zoom-in duration-300">
-                      <ArrowRight size={20} />
-                    </div>
-                  )}
-                </div>
-
-                {/* Project Details */}
-                <div className="p-8">
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                    {project.description}
-                  </p>
-
-                  {/* Tech Stack */}
-                  <div className="mb-6">
-                    <p className="text-gray-900 font-black text-xs uppercase tracking-wider mb-3">
-                      Tech Stack
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.techStack.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="badge-tech px-3 py-1.5 bg-gray-100 text-gray-800 text-xs font-bold rounded-sm border border-gray-200 hover:border-orange-300 hover:bg-orange-50"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Features */}
-                  <div className="mb-6">
-                    <p className="text-gray-900 font-black text-xs uppercase tracking-wider mb-3">
-                      Key Features
-                    </p>
-                    <ul className="space-y-2.5">
-                      {project.features.slice(0, 3).map((feature, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-sm">
-                          <Check size={18} className="text-orange-500 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700 font-medium">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Metrics */}
-                  <div className="border-t border-gray-200 pt-5 mb-5">
-                    <div className="grid grid-cols-2 gap-4">
-                      {project.metrics.slice(0, 2).map((metric, i) => (
-                        <div key={i} className="text-center bg-gradient-to-br from-orange-50 to-orange-100 rounded-sm p-3 border border-orange-200">
-                          <p className="text-orange-600 font-black text-xl">
-                            {metric.split(' ')[0]}
-                          </p>
-                          <p className="text-gray-600 text-xs uppercase font-semibold">
-                            {metric.split(' ').slice(1).join(' ')}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Click to View Button */}
-                  <button className="w-full bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white py-4 font-black uppercase text-sm tracking-wider rounded-sm shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
-                    <span>View Live Demo</span>
-                    <ExternalLink size={18} />
-                  </button>
+      {/* Grid */}
+      <main className="px-6 md:px-12 pb-32 bg-[#0a0a0a] pt-32 -mt-10 relative z-20">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project, i) => (
+            <Link 
+              to={project.componentPath || "#"} 
+              key={i} 
+              className="project-card overflow-hidden group animate-up cursor-pointer bg-[#111] border border-white/5 flex flex-col"
+              style={{ animationDelay: `${0.1 * (i % 6)}s` }}
+            >
+              <div className="relative h-64 overflow-hidden bg-black">
+                <img 
+                  src={project.image || "/assets/web.png"} 
+                  alt={project.name}
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-60 group-hover:opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent" />
+                <div className="absolute top-6 left-6 p-3 bg-black/80 backdrop-blur-md border border-white/10 rounded-sm">
+                  <Code size={18} className="text-[#FF6B00]" />
                 </div>
               </div>
-            ))}
-          </div>
 
-          {/* CTA Section */}
-          <div className="mt-24 text-center bg-gradient-to-br from-orange-50 to-orange-100 rounded-sm p-16 border-2 border-orange-200">
-            <h2
-              className="text-4xl md:text-6xl font-black mb-6 text-gray-900"
-              style={{ animation: "fadeInUp 0.8s ease-out" }}
-            >
-              Ready for <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Your Project?</span>
-            </h2>
-            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto font-medium">
-              Join 500+ businesses transformed in 72 hours
-            </p>
-            <Link
-              to="/"
-              className="inline-block px-12 py-5 bg-gradient-to-r from-orange-400 to-orange-500 hover:from-orange-500 hover:to-orange-600 text-white font-black text-lg uppercase tracking-widest transition-all duration-300 shadow-2xl hover:shadow-orange-400/50 hover:scale-105 rounded-sm"
-            >
-              Get Started Today
+              <div className="p-10 flex flex-col flex-1">
+                <div className="flex justify-between items-center mb-8">
+                  <div className="text-[11px] font-black text-[#FF6B00] uppercase tracking-[0.4em]">
+                     {project.year || '2026'} Artifact
+                  </div>
+                </div>
+
+                <h3 className="text-4xl font-black uppercase tracking-tighter text-white mb-6 group-hover:text-[#FF6B00] transition-colors italic">
+                   {project.name || project.title}
+                </h3>
+                <p className="text-gray-300 font-medium leading-relaxed mb-10 flex-1 text-lg">
+                   {project.description}
+                </p>
+
+                <div className="flex flex-wrap gap-3 mb-10">
+                   {(project.techStack || []).slice(0, 3).map((tech, j) => (
+                     <span key={j} className="text-[10px] font-black text-white/40 uppercase tracking-widest bg-white/5 px-4 py-2 border border-white/5">
+                        {tech}
+                     </span>
+                   ))}
+                </div>
+
+                <div className="inline-flex items-center gap-4 text-[13px] font-black uppercase tracking-[0.3em] text-[#FF6B00] pt-6 border-t border-white/5 group-hover:gap-6 transition-all">
+                  Launch Artifact <ArrowRight size={18} />
+                </div>
+              </div>
             </Link>
-          </div>
+          ))}
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-200 py-12 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-3 text-3xl font-black">
-            <img src="/logo.png" alt="Velox Logo" className="h-10 w-auto object-contain" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-              VELOX
-            </span>
-          </div>
-          <p className="text-gray-500 text-sm uppercase tracking-widest font-semibold">
-            © 2025. Websites built different.
-          </p>
-        </div>
+      {/* Footer CTA */}
+      <footer className="bg-white text-black py-64 px-6 text-center border-t border-black/5">
+         <div className="max-w-4xl mx-auto">
+            <h2 className="text-7xl md:text-[140px] font-black italic mb-12 uppercase tracking-tighter leading-none">CAPTURE<br/>THE MARKET.</h2>
+            <Link 
+              to="/contact"
+              className="px-24 py-10 bg-[#FF6B00] text-white font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-700 rounded-sm inline-block text-2xl shadow-2xl shadow-[#FF6B00]/20"
+            >
+              Secure Strategic Slot
+            </Link>
+         </div>
       </footer>
     </div>
   );

@@ -5,6 +5,10 @@ import { HelmetProvider } from "react-helmet-async";
 import ScrollToTop from "./components/ScrollToTop";
 import VeloxResponsive from "./components/Velox";
 import Projects from "./components/Projects";
+import AiSolutions from "./components/AiSolutions";
+import Contact from "./components/Contact";
+import Pricing from './components/Pricing';
+import AboutAutomation from './components/AboutAutomation';
 import EcommercePlatform from "./projects/EcommercePlatform";
 import SaasDashboard from "./projects/SaasDashboard";
 import {
@@ -26,7 +30,11 @@ function App() {
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<VeloxResponsive />} />
+            <Route path="/ai-solutions" element={<AiSolutions />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/what-is-automation" element={<AboutAutomation />} />
             <Route path="/projects/ecommerce" element={<EcommercePlatform />} />
             <Route path="/projects/saas-dashboard" element={<SaasDashboard />} />
             <Route path="/projects/restaurant" element={<RestaurantWebsite />} />
