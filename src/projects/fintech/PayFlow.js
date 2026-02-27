@@ -11,21 +11,21 @@ export default function PayFlow() {
     <div className="bg-slate-950 min-h-screen text-slate-100 font-sans selection:bg-purple-500/30">
       
       {/* Sidebar / Mobile Nav */}
-      <nav className="fixed bottom-0 w-full md:w-20 md:h-screen bg-slate-900 border-t md:border-t-0 md:border-r border-slate-800 z-50 flex md:flex-col justify-around md:justify-start items-center p-4 gap-8">
-        <a href="/projects" className="hidden md:flex w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl items-center justify-center font-black text-2xl mb-8 hover:scale-105 transition-transform text-white no-underline">P</a>
+      <nav className="fixed bottom-0 w-full md:w-20 md:h-screen bg-slate-900 border-t md:border-t-0 md:border-r border-slate-800 z-50 flex md:flex-col justify-around md:justify-start items-center p-2 sm:p-4 gap-4 sm:gap-8">
+        <a href="/projects" className="hidden md:flex w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl items-center justify-center font-black text-2xl mb-8 hover:scale-105 transition-transform text-white no-underline shadow-lg shadow-purple-500/20">V</a>
         
-        <button onClick={() => setActiveTab('dashboard')} className={`p-3 rounded-xl transition-all ${activeTab === 'dashboard' ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25' : 'text-slate-500 hover:text-slate-300'}`}>
-            <Wallet size={24} />
+        <button onClick={() => setActiveTab('dashboard')} className={`p-2.5 sm:p-3 rounded-xl transition-all ${activeTab === 'dashboard' ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25' : 'text-slate-500 hover:text-slate-300'}`}>
+            <Wallet size={20} className="sm:size-[24px]" />
         </button>
-        <button onClick={() => setActiveTab('market')} className={`p-3 rounded-xl transition-all ${activeTab === 'market' ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25' : 'text-slate-500 hover:text-slate-300'}`}>
-            <TrendingUp size={24} />
+        <button onClick={() => setActiveTab('market')} className={`p-2.5 sm:p-3 rounded-xl transition-all ${activeTab === 'market' ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25' : 'text-slate-500 hover:text-slate-300'}`}>
+            <TrendingUp size={20} className="sm:size-[24px]" />
         </button>
-        <button onClick={() => setActiveTab('analytics')} className={`p-3 rounded-xl transition-all ${activeTab === 'analytics' ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25' : 'text-slate-500 hover:text-slate-300'}`}>
-             <PieChart size={24} />
+        <button onClick={() => setActiveTab('analytics')} className={`p-2.5 sm:p-3 rounded-xl transition-all ${activeTab === 'analytics' ? 'bg-purple-500 text-white shadow-lg shadow-purple-500/25' : 'text-slate-500 hover:text-slate-300'}`}>
+             <PieChart size={20} className="sm:size-[24px]" />
         </button>
         
-        <a href="/projects" className="md:mt-auto p-3 rounded-xl text-slate-500 hover:text-white transition-colors">
-            <ChevronRight className="rotate-180" size={24} />
+        <a href="/projects" className="md:mt-auto p-2.5 sm:p-3 rounded-xl text-slate-500 hover:text-white transition-colors">
+            <ChevronRight size={20} className="sm:size-[24px] rotate-180" />
         </a>
       </nav>
 
@@ -35,11 +35,11 @@ export default function PayFlow() {
         {/* Header */}
         <header className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10">
             <div>
-                <h1 className="text-xl md:text-3xl font-black mb-1 opacity-60 uppercase tracking-widest text-slate-400">Total Balance</h1>
+                <h1 className="text-sm sm:text-xl md:text-3xl font-black mb-1 opacity-60 uppercase tracking-widest text-slate-400">Total Balance</h1>
                 <div className="flex flex-wrap items-baseline gap-2 md:gap-4">
-                    <span className="text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">$24,562.00</span>
-                    <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
-                        <ArrowUpRight size={14} /> +2.4%
+                    <span className="text-2xl sm:text-4xl md:text-5xl font-black bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">$24,562.00</span>
+                    <span className="bg-green-500/20 text-green-400 px-2 py-1 rounded-lg text-[10px] sm:text-xs font-bold flex items-center gap-1">
+                        <ArrowUpRight size={12} className="sm:size-[14px]" /> +2.4%
                     </span>
                 </div>
             </div>

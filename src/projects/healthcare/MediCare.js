@@ -90,34 +90,34 @@ export default function MediCare() {
                 </div>
 
                 {/* Dashboard Widgets */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
-                        <div className="flex justify-between items-start mb-4">
-                            <div className="p-3 bg-red-50 text-red-500 rounded-2xl"><Heart size={24} /></div>
-                            <Activity className="text-gray-300" size={20} />
+                <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+                    <div className="bg-white p-4 sm:p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                        <div className="flex justify-between items-start mb-3 sm:mb-4">
+                            <div className="p-2.5 sm:p-3 bg-red-50 text-red-500 rounded-2xl"><Heart size={20} className="sm:size-[24px]" /></div>
+                            <Activity size={18} className="sm:size-[20px] text-gray-300" />
                         </div>
-                        <h3 className="text-gray-500 font-medium mb-1">Heart Rate</h3>
-                        <div className="flex items-baseline gap-2">
-                            <span className="text-4xl font-black text-gray-900">72</span>
-                            <span className="text-gray-400 font-bold">bpm</span>
+                        <h3 className="text-xs sm:text-gray-500 font-medium mb-1">Heart Rate</h3>
+                        <div className="flex items-baseline gap-1.5 sm:gap-2">
+                            <span className="text-2xl sm:text-4xl font-black text-gray-900">72</span>
+                            <span className="text-[10px] sm:text-gray-400 font-bold uppercase">bpm</span>
                         </div>
                     </div>
-                     <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
-                        <div className="flex justify-between items-start mb-4">
-                             <div className="p-3 bg-blue-50 text-blue-500 rounded-2xl"><Activity size={24} /></div>
+                     <div className="bg-white p-4 sm:p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all">
+                        <div className="flex justify-between items-start mb-3 sm:mb-4">
+                             <div className="p-2.5 sm:p-3 bg-blue-50 text-blue-500 rounded-2xl"><Activity size={20} className="sm:size-[24px]" /></div>
                         </div>
-                        <h3 className="text-gray-500 font-medium mb-1">Blood Pressure</h3>
-                         <div className="flex items-baseline gap-2">
-                            <span className="text-4xl font-black text-gray-900">120/80</span>
+                        <h3 className="text-xs sm:text-gray-500 font-medium mb-1">Blood Pressure</h3>
+                         <div className="flex items-baseline gap-1.5 sm:gap-2">
+                            <span className="text-2xl sm:text-4xl font-black text-gray-900">120/80</span>
                         </div>
                     </div>
                     
-                    <div className="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all flex flex-col items-center justify-center text-center">
-                         <div className="w-16 h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center mb-4 animate-pulse">
-                            <Phone size={32} />
+                    <div className="bg-white p-4 sm:p-6 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-all flex flex-col items-center justify-center text-center">
+                         <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-50 text-red-500 rounded-full flex items-center justify-center mb-3 sm:mb-4 animate-pulse">
+                            <Phone size={24} className="sm:size-[32px]" />
                          </div>
-                         <h3 className="font-black text-gray-900 mb-1">Emergency SOS</h3>
-                         <p className="text-xs text-gray-500 font-bold">Direct line to ambulance</p>
+                         <h3 className="text-sm sm:text-base font-black text-gray-900 mb-1">Emergency SOS</h3>
+                         <p className="text-[10px] text-gray-500 font-bold">Direct line</p>
                      </div>
                 </div>
 
@@ -164,11 +164,11 @@ export default function MediCare() {
   return (
     <div className="bg-gray-50 min-h-screen font-sans selection:bg-blue-100">
       {/* Navbar */}
-      <nav className="bg-white border-b border-gray-100 sticky top-0 z-40 px-6 py-4 flex items-center justify-between">
+      <nav className="bg-white border-b border-gray-100 sticky top-0 z-40 px-3 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
          <div className="flex items-center gap-12">
-            <div className="flex items-center gap-2">
-                <div className="bg-blue-600 p-2 rounded-xl text-white"><Activity size={24} strokeWidth={3} /></div>
-                <span className="text-2xl font-black text-gray-900 tracking-tight">MediCare<span className="text-blue-600">+</span></span>
+            <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="bg-blue-600 p-1.5 sm:p-2 rounded-xl text-white"><Activity size={20} className="sm:size-[24px]" strokeWidth={3} /></div>
+                <span className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight">MediCare<span className="text-blue-600">+</span></span>
             </div>
             <div className="hidden md:flex items-center gap-8 text-sm font-bold text-gray-500">
                 {['Dashboard', 'Find Doctors', 'Appointments', 'Lab Results'].map(tab => (
@@ -187,12 +187,12 @@ export default function MediCare() {
                 ))}
             </div>
          </div>
-         <div className="flex items-center gap-4">
-             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-2 text-gray-600">
-                {mobileMenuOpen ? <X /> : <Menu />}
+         <div className="flex items-center gap-2 sm:gap-4">
+             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden p-1.5 text-gray-600 hover:bg-gray-50 rounded-lg">
+                {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
              </button>
-             <a href="/projects" className="hidden lg:flex items-center gap-2 text-sm font-bold text-gray-600 hover:text-gray-900 bg-gray-100 px-4 py-2 rounded-lg transition-colors">
-                <ChevronRight className="rotate-180" size={16} /> Returns to Projects
+             <a href="/projects" className="hidden sm:flex items-center gap-2 text-xs font-bold text-gray-600 hover:text-gray-900 bg-gray-100 px-3 py-1.5 rounded-lg transition-colors">
+                <ChevronRight className="rotate-180" size={14} /> <span className="hidden xs:inline">Returns to Projects</span><span className="xs:hidden">Back</span>
              </a>
              <button className="p-3 hover:bg-gray-100 rounded-full transition-colors relative">
                 <Bell size={20} className="text-gray-600" />

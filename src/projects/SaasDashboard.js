@@ -32,13 +32,13 @@ function TaskFlowContent() {
         return (
           <>
             {/* Header */}
-            <div className="mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+            <div className="mb-6 sm:mb-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 px-2 sm:px-0">
               <div>
-                <h2 className="text-4xl font-black mb-2 text-gray-900 tracking-tight">Dashboard</h2>
-                <p className="text-gray-500 font-medium">Welcome back! Manage your projects and team efficiently.</p>
+                <h2 className="text-2xl sm:text-4xl font-black mb-1 sm:mb-2 text-gray-900 tracking-tight uppercase">Dashboard</h2>
+                <p className="text-xs sm:text-gray-500 font-medium">Welcome back! Manage your projects efficiently.</p>
               </div>
-              <div className="flex items-center gap-3 bg-white p-2 rounded-xl border border-gray-200 shadow-sm">
-                 <div className="px-4 py-2 bg-gray-50 rounded-lg text-sm font-bold text-gray-600">
+              <div className="flex items-center gap-2 sm:gap-3 bg-white p-1.5 sm:p-2 rounded-xl border border-gray-200 shadow-sm">
+                 <div className="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-50 rounded-lg text-[10px] sm:text-sm font-bold text-gray-600">
                     {getDate()}
                  </div>
               </div>
@@ -88,10 +88,14 @@ function TaskFlowContent() {
   return (
     <div className="bg-gray-50/50 min-h-screen font-sans selection:bg-blue-200">
       {/* Mobile Header */}
-      <div className="md:hidden bg-white p-4 flex justify-between items-center border-b sticky top-0 z-30">
-        <span className="font-black text-xl text-gray-900">TaskFlow.</span>
-        <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2">
-            {isSidebarOpen ? <X /> : <Menu />}
+      <div className="md:hidden bg-white p-3 sm:p-4 flex justify-between items-center border-b sticky top-0 z-30">
+        <span className="font-black text-lg sm:text-xl text-gray-900 uppercase italic">TaskFlow<span className="text-blue-600">.</span></span>
+        <button 
+          className="p-2 hover:bg-gray-50 rounded-full transition-colors" 
+          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+          aria-label="Toggle Menu"
+        >
+            {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 

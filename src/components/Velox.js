@@ -54,10 +54,10 @@ export default function VeloxResponsive() {
       `}</style>
 
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrollY > 50 ? 'backdrop-blur-xl bg-white/80 py-4 border-b border-black/5' : 'bg-transparent py-8'}`}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center">
-          <Link to="/" className="text-3xl font-black tracking-tighter uppercase italic flex items-center gap-2">
-             <span className={scrollY > 50 ? "text-black" : "text-black"}>VELOX</span><span className="text-[#FF6B00]">.</span>
+      <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrollY > 50 ? 'backdrop-blur-xl bg-white/80 py-4 border-b border-black/5' : 'bg-transparent py-6 md:py-8'}`}>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
+          <Link to="/" className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase italic flex items-center gap-1 sm:gap-2">
+             <span className="text-black">VELOX</span><span className="text-[#FF6B00]">.</span>
           </Link>
           
           <div className="hidden lg:flex items-center gap-10">
@@ -68,8 +68,12 @@ export default function VeloxResponsive() {
             <Link to="/contact" className="px-10 py-5 bg-[#FF6B00] text-white font-black text-[14px] uppercase tracking-widest hover:bg-black transition-all rounded-sm shadow-lg shadow-[#FF6B00]/20">Reach Out</Link>
           </div>
 
-          <button className="md:hidden text-black" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          <button 
+            className="lg:hidden text-black p-2 hover:bg-black/5 rounded-full transition-colors" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {mobileMenuOpen ? <X size={24} className="sm:size-[28px]" /> : <Menu size={24} className="sm:size-[28px]" />}
           </button>
         </div>
       </nav>
@@ -226,15 +230,17 @@ export default function VeloxResponsive() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-black py-20 px-6 border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
-          <Link to="/" className="text-3xl font-black text-white tracking-tighter uppercase italic italic">VELOX<span className="text-[#FF6B00]">.</span></Link>
-          <div className="flex gap-10 text-[10px] font-black uppercase tracking-[0.3em] text-gray-400">
-             <Link to="/ai-solutions" className="hover:text-[#FF6B00]">AI Solutions</Link>
-             <Link to="/projects" className="hover:text-[#FF6B00]">Web Portfolio</Link>
-             <span className="text-[#FF6B00]/60">velox.operations09@gmail.com</span>
+      <footer className="bg-black py-12 md:py-20 px-4 md:px-6 border-t border-white/5">
+        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10 text-center md:text-left">
+          <Link to="/" className="text-2xl md:text-3xl font-black text-white tracking-tighter uppercase italic">VELOX<span className="text-[#FF6B00]">.</span></Link>
+          <div className="flex flex-wrap justify-center gap-6 md:gap-10 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-400">
+             <Link to="/ai-solutions" className="hover:text-[#FF6B00] transition-colors">AI Solutions</Link>
+             <Link to="/projects" className="hover:text-[#FF6B00] transition-colors">Web Portfolio</Link>
+             <a href="mailto:velox.operations09@gmail.com" className="text-[#FF6B00]/80 lowercase tracking-normal font-medium sm:font-black sm:uppercase sm:tracking-[0.3em]">velox.operations09@gmail.com</a>
           </div>
-          <p className="text-[10px] font-black uppercase tracking-[0.3em] text-gray-600">© 2026 VELOX UNIFIED SOLUTIONS UNIT. ALL RIGHTS RESERVED.</p>
+          <p className="text-[8px] sm:text-[10px] font-medium sm:font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-600 max-w-[250px] md:max-w-none">
+            © 2026 VELOX UNIFIED SOLUTIONS UNIT. <br className="sm:hidden" /> ALL RIGHTS RESERVED.
+          </p>
         </div>
       </footer>
     </div>

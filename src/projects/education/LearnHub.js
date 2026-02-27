@@ -11,10 +11,10 @@ export default function LearnHub() {
   return (
     <div className="bg-gray-50 min-h-screen font-sans">
       {/* Navbar */}
-      <nav className="bg-white border-b border-gray-200 px-6 h-20 flex items-center justify-between sticky top-0 z-40">
-        <div className="flex items-center gap-2 text-orange-600">
-            <BookOpen size={32} />
-            <span className="text-2xl font-black text-gray-900 tracking-tight">LearnHub</span>
+      <nav className="bg-white border-b border-gray-200 px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between sticky top-0 z-40">
+        <div className="flex items-center gap-1.5 sm:gap-2 text-orange-600">
+            <BookOpen size={24} className="sm:size-[32px]" />
+            <span className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight">LearnHub</span>
         </div>
         <div className="flex-1 max-w-xl mx-12 hidden lg:block">
             <div className="relative">
@@ -30,8 +30,12 @@ export default function LearnHub() {
              <div className="w-10 h-10 rounded-full bg-gradient-to-r from-orange-400 to-red-500 p-0.5">
                 <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80" className="w-full h-full rounded-full object-cover border-2 border-white" alt="Profile" />
              </div>
-             <button className="lg:hidden p-2 text-gray-600" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-                {mobileMenuOpen ? <X /> : <Menu />}
+             <button 
+               className="lg:hidden p-1.5 sm:p-2 text-gray-600 hover:bg-gray-50 rounded-lg transition-colors" 
+               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+               aria-label="Toggle Menu"
+             >
+                {mobileMenuOpen ? <X size={20} className="sm:size-[24px]" /> : <Menu size={20} className="sm:size-[24px]" />}
              </button>
         </div>
       </nav>
@@ -61,8 +65,8 @@ export default function LearnHub() {
             {/* Hero / Continue Watching */}
              <div>
                   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-6 md:mb-8 gap-4 px-2">
-                     <h1 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">CONTINUE<br className="sm:hidden"/> LEARNING</h1>
-                     <a href="/projects" className="flex items-center gap-2 bg-gray-900 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-gray-800 transition-colors text-xs uppercase tracking-widest border border-white/10">
+                     <h1 className="text-xl md:text-3xl font-black text-gray-900 tracking-tight leading-tight uppercase">CONTINUE<br className="xs:hidden"/> LEARNING</h1>
+                     <a href="/projects" className="flex items-center gap-2 bg-gray-900 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-bold hover:bg-gray-800 transition-colors text-[10px] sm:text-xs uppercase tracking-widest border border-white/10">
                          <ChevronRight className="rotate-180" size={14} /> Artifacts
                      </a>
                  </div>

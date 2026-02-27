@@ -28,10 +28,10 @@ export default function Contact() {
   return (
     <div className="bg-white min-h-screen text-black font-inter selection:bg-[#FF6B00]/30 selection:text-white">
       {/* Navigation */}
-      <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrollY > 50 ? 'backdrop-blur-xl bg-white/80 py-4 border-b border-black/5' : 'bg-transparent py-8'}`}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex justify-between items-center text-black">
-          <Link to="/" className="text-3xl font-black tracking-tighter uppercase italic">
-             VELOX<span className="text-[#FF6B00]">.</span>
+      <nav className={`fixed top-0 w-full z-[100] transition-all duration-500 ${scrollY > 50 ? 'backdrop-blur-xl bg-white/80 py-4 border-b border-black/5' : 'bg-transparent py-6 md:py-8'}`}>
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center text-black">
+          <Link to="/" className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase italic flex items-center gap-1 sm:gap-2">
+             <span className="text-black">VELOX</span><span className="text-[#FF6B00]">.</span>
           </Link>
           
           <div className="hidden lg:flex items-center gap-10">
@@ -42,8 +42,12 @@ export default function Contact() {
             <Link to="/contact" className="px-10 py-5 bg-[#FF6B00] text-white font-black text-[14px] uppercase tracking-widest hover:bg-black transition-all rounded-sm shadow-xl shadow-[#FF6B00]/20">Reach Out</Link>
           </div>
 
-          <button className="lg:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          <button 
+            className="lg:hidden text-black p-2 hover:bg-black/5 rounded-full transition-colors" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {mobileMenuOpen ? <X size={24} className="sm:size-[28px]" /> : <Menu size={24} className="sm:size-[28px]" />}
           </button>
         </div>
       </nav>
@@ -189,9 +193,11 @@ export default function Contact() {
       </main>
 
       {/* Footer Minimal */}
-      <footer className="py-20 px-6 bg-black border-t border-white/5 text-center">
-         <div className="text-2xl font-black text-white italic uppercase mb-6">VELOX<span className="text-[#FF6B00]">.</span></div>
-         <p className="text-[10px] font-black uppercase tracking-[0.4em] text-gray-700">© 2026 VELOX UNIFIED SOLUTIONS UNIT. ENGINEERING THE FUTURE.</p>
+      <footer className="py-12 md:py-20 px-4 md:px-6 bg-black border-t border-white/5 text-center">
+         <div className="text-2xl md:text-3xl font-black text-white italic uppercase mb-6">VELOX<span className="text-[#FF6B00]">.</span></div>
+         <p className="text-[8px] sm:text-[10px] font-medium sm:font-black uppercase tracking-[0.2em] sm:tracking-[0.4em] text-gray-700 max-w-[280px] md:max-w-none mx-auto">
+            © 2026 VELOX UNIFIED SOLUTIONS UNIT. <br className="sm:hidden" /> ENGINEERING THE FUTURE. | <a href="mailto:velox.operations09@gmail.com" className="text-[#FF6B00]/80 lowercase tracking-normal sm:uppercase sm:tracking-widest">velox.operations09@gmail.com</a>
+         </p>
       </footer>
     </div>
   );

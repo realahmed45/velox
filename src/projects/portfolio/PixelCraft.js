@@ -16,8 +16,8 @@ export default function PixelCraft() {
     <div className="bg-neutral-900 min-h-screen text-white font-sans selection:bg-pink-500/30">
       
       {/* Navigation */}
-      <nav className="p-8 md:p-12 flex justify-between items-center">
-        <div className="text-2xl font-black tracking-tighter">PIXEL<span className="text-pink-500">CRAFT</span>.</div>
+      <nav className="p-4 sm:p-8 md:p-12 flex justify-between items-center">
+        <div className="text-xl sm:text-2xl font-black tracking-tighter uppercase italic">PIXEL<span className="text-pink-500">CRAFT</span>.</div>
         <div className="hidden md:flex gap-8 text-neutral-400 font-bold text-sm tracking-widest uppercase items-center">
             <a href="/projects" className="text-white hover:text-pink-500 transition-colors flex items-center gap-2">
                 <ExternalLink size={16} className="rotate-180" /> Back to Projects
@@ -27,7 +27,11 @@ export default function PixelCraft() {
             <a href="#" className="hover:text-white transition-colors">About</a>
             <a href="#" className="hover:text-white transition-colors">Contact</a>
         </div>
-        <button className="w-12 h-12 rounded-full border border-neutral-700 flex items-center justify-center hover:bg-white hover:text-black transition-all md:hidden" onClick={() => setMobileNavOpen(true)}>
+        <button 
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-neutral-700 flex items-center justify-center hover:bg-white hover:text-black transition-all md:hidden" 
+          onClick={() => setMobileNavOpen(true)}
+          aria-label="Open Menu"
+        >
             <Menu size={20} />
         </button>
       </nav>
@@ -53,12 +57,12 @@ export default function PixelCraft() {
       <div className="max-w-[1800px] mx-auto px-6 md:px-12">
         
         {/* Header */}
-        <header className="py-16 md:py-32 text-center md:text-left">
-            <h1 className="text-5xl md:text-9xl font-black leading-none mb-8 break-words tracking-tighter uppercase">
+        <header className="py-12 sm:py-16 md:py-32 text-center md:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-9xl font-black leading-none mb-6 sm:mb-8 break-words tracking-tighter uppercase italic">
                 DIGITAL <br className="hidden md:block" />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">ALCHEMY</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 not-italic">ALCHEMY</span>
             </h1>
-            <p className="text-lg md:text-2xl text-neutral-400 max-w-2xl leading-relaxed mx-auto md:mx-0">
+            <p className="text-base sm:text-lg md:text-2xl text-neutral-400 max-w-2xl leading-relaxed mx-auto md:mx-0 px-2 sm:px-0">
                 Crafting digital experiences that captivate, inspire, and convert through a blend of creativity and tech.
             </p>
         </header>

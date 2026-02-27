@@ -56,10 +56,10 @@ export default function Projects() {
       <div className="custom-cursor hidden md:block" style={{ left: `${cursorX}px`, top: `${cursorY}px` }} />
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-black/5">
-        <div className="w-full px-6 md:px-12 py-6 flex justify-between items-center text-black">
-          <Link to="/" className="text-3xl font-black tracking-tighter uppercase italic">
-             VELOX<span className="text-[#FF6B00]">.</span>
+      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 border-b border-black/5 py-4 sm:py-0">
+        <div className="w-full px-4 sm:px-6 md:px-12 py-3 sm:py-6 flex justify-between items-center text-black">
+          <Link to="/" className="text-xl sm:text-2xl md:text-3xl font-black tracking-tighter uppercase italic flex items-center gap-1 sm:gap-2">
+             <span className="text-black">VELOX</span><span className="text-[#FF6B00]">.</span>
           </Link>
           <div className="hidden lg:flex items-center gap-10">
             <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">AI Solutions</Link>
@@ -68,8 +68,12 @@ export default function Projects() {
             <Link to="/pricing" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Pricing</Link>
             <Link to="/contact" className="px-10 py-5 bg-[#FF6B00] text-white font-black text-[14px] uppercase tracking-widest hover:bg-black transition-all rounded-sm shadow-xl shadow-[#FF6B00]/20">Reach Out</Link>
           </div>
-          <button className="lg:hidden text-black" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          <button 
+            className="lg:hidden text-black p-2 hover:bg-black/5 rounded-full transition-colors" 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {mobileMenuOpen ? <X size={24} className="sm:size-[28px]" /> : <Menu size={24} className="sm:size-[28px]" />}
           </button>
         </div>
       </nav>
@@ -169,12 +173,12 @@ export default function Projects() {
       </main>
 
       {/* Footer CTA */}
-      <footer className="bg-white text-black py-48 md:py-64 px-6 text-center border-t border-black/5">
+      <footer className="bg-white text-black py-24 md:py-64 px-4 md:px-6 text-center border-t border-black/5">
          <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-[140px] font-black italic mb-8 md:mb-12 uppercase tracking-tighter leading-none">CAPTURE<br/>THE MARKET.</h2>
+            <h2 className="text-5xl sm:text-6xl md:text-[140px] font-black italic mb-10 md:mb-12 uppercase tracking-tighter leading-[0.9]">CAPTURE<br/><span className="text-[#FF6B00] not-italic">THE MARKET.</span></h2>
             <Link 
               to="/contact"
-              className="px-16 md:px-24 py-8 md:py-10 bg-[#FF6B00] text-white font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-700 rounded-sm inline-block text-xl md:text-2xl shadow-2xl shadow-[#FF6B00]/20"
+              className="px-10 sm:px-16 md:px-24 py-6 md:py-10 bg-[#FF6B00] text-white font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all duration-700 rounded-sm inline-block text-base md:text-2xl shadow-2xl shadow-[#FF6B00]/20"
             >
               Secure Strategic Slot
             </Link>

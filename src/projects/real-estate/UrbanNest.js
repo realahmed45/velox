@@ -34,15 +34,16 @@ export default function UrbanNest() {
         />
         
         {/* Back to Projects Button */}
-        <div className="absolute top-6 left-6 z-30">
-            <a href="/projects" className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-6 py-3 rounded-xl text-white font-bold hover:bg-white/20 transition-all border border-white/20">
-                <ChevronRight className="rotate-180" size={20} />
-                Back to Projects
+        <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-30">
+            <a href="/projects" className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 sm:px-6 py-2 sm:py-3 rounded-xl text-white font-bold hover:bg-white/20 transition-all border border-white/20 text-xs sm:text-base">
+                <ChevronRight className="rotate-180" size={16} />
+                <span className="hidden xs:inline">Back to Projects</span>
+                <span className="xs:hidden">Back</span>
             </a>
         </div>
 
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-4">
-            <h1 className="text-4xl md:text-7xl font-black text-white mb-6 drop-shadow-2xl tracking-tighter uppercase px-2">
+            <h1 className="text-3xl sm:text-4xl md:text-7xl font-black text-white mb-6 drop-shadow-2xl tracking-tighter uppercase px-2">
                 Find Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">Sanctuary</span>
             </h1>
             <div className="bg-white/10 backdrop-blur-md p-2 md:p-2 rounded-2xl border border-white/20 w-full max-w-3xl flex flex-col md:flex-row gap-2 shadow-2xl">
@@ -65,10 +66,10 @@ export default function UrbanNest() {
       <div className="max-w-[1600px] mx-auto p-6 md:p-10 -mt-20 relative z-30">
         
         {/* Filters & Controls */}
-        <div className="bg-white rounded-2xl shadow-xl p-6 mb-10 flex flex-col xl:flex-row justify-between items-center gap-6">
-            <div className="flex flex-wrap gap-4 items-center w-full xl:w-auto">
-                <div className="flex items-center gap-2 border px-4 py-2 rounded-xl bg-gray-50">
-                    <span className="text-sm font-bold text-gray-500 uppercase tracking-wide">Price</span>
+        <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 mb-10 flex flex-col xl:flex-row justify-between items-center gap-6">
+            <div className="flex flex-wrap gap-4 items-center w-full xl:w-auto justify-center sm:justify-start">
+                <div className="flex items-center gap-2 border px-3 sm:px-4 py-2 rounded-xl bg-gray-50 max-w-full overflow-hidden">
+                    <span className="text-[10px] sm:text-sm font-bold text-gray-500 uppercase tracking-wide">Price</span>
                     <input 
                         type="range" 
                         min="500000" max="15000000" step="100000"

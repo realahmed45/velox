@@ -15,15 +15,15 @@ export default function FitZone() {
       
       {/* Navigation */}
       <nav className="border-b border-gray-900 bg-black/50 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div className="flex items-center gap-8">
-                <div className="flex items-center gap-2 text-green-500">
-                    <Dumbbell size={32} fill="currentColor" />
-                    <span className="text-2xl font-black text-white italic tracking-tighter">FIT<span className="text-green-500">ZONE</span></span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
+            <div className="flex items-center gap-2 sm:gap-8">
+                <div className="flex items-center gap-1.5 sm:gap-2 text-green-500">
+                    <Dumbbell size={24} className="sm:size-[32px]" fill="currentColor" />
+                    <span className="text-xl sm:text-2xl font-black text-white italic tracking-tighter uppercase">FIT<span className="text-green-500">ZONE</span></span>
                 </div>
                 
-                <a href="/projects" className="hidden lg:flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors">
-                    <ChevronRight className="rotate-180" size={16} /> Back to Projects
+                <a href="/projects" className="hidden xs:flex items-center gap-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-gray-400 hover:text-white transition-colors">
+                    <ChevronRight size={14} className="sm:size-[16px] rotate-180" /> <span className="hidden sm:inline">Back to Projects</span><span className="sm:hidden">Back</span>
                 </a>
             </div>
             
@@ -36,8 +36,12 @@ export default function FitZone() {
             <button onClick={() => alert('Booking System Initializing...')} className="hidden md:block bg-green-600 hover:bg-green-500 text-black px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest transition-all">
                 Book Now
             </button>
-            <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
-                {menuOpen ? <X /> : <Menu />}
+            <button 
+              className="md:hidden text-white p-2 hover:bg-white/5 rounded-full transition-colors" 
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle Menu"
+            >
+                {menuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
         </div>
         {/* Mobile Menu Overlay */}

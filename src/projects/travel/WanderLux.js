@@ -17,18 +17,18 @@ export default function WanderLux() {
         <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80" className="absolute inset-0 w-full h-full object-cover animate-in fade-in duration-1000 scale-105" alt="Travel"/>
         
         {/* Top Nav */}
-        <div className="absolute top-0 left-0 right-0 z-50 p-6 flex justify-between items-center">
+        <div className="absolute top-0 left-0 right-0 z-50 p-4 sm:p-6 flex justify-between items-center">
              <div /> {/* Spacer */}
-             <a href="/projects" className="bg-white/10 backdrop-blur-md px-6 py-2 rounded-full font-bold text-sm hover:bg-white/20 transition-all flex items-center gap-2">
-                Back to Projects <ArrowRight size={16} />
+             <a href="/projects" className="bg-white/10 backdrop-blur-md px-4 sm:px-6 py-2 rounded-full font-bold text-xs sm:text-sm hover:bg-white/20 transition-all flex items-center gap-2 border border-white/10">
+                <span className="hidden xs:inline">Back</span> to Projects <ArrowRight size={14} className="sm:size-[16px]" />
              </a>
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-6 h-full flex flex-col justify-center text-center md:text-left">
-            <h1 className="text-5xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter drop-shadow-2xl uppercase">
+            <h1 className="text-4xl sm:text-5xl md:text-8xl font-black mb-4 md:mb-6 tracking-tighter drop-shadow-2xl uppercase italic">
                 WANDER<span className="text-sky-400 font-light italic">LUX</span>
             </h1>
-            <p className="text-lg md:text-2xl font-medium max-w-2xl text-slate-100 drop-shadow-md mb-8 md:mb-10 px-4 md:px-0">
+            <p className="text-base sm:text-lg md:text-2xl font-medium max-w-2xl text-slate-100 drop-shadow-md mb-8 md:mb-10 px-2 md:px-0">
                 Curated journeys for the modern explorer. Experience the world in unparalled luxury.
             </p>
             
@@ -40,14 +40,14 @@ export default function WanderLux() {
                         placeholder="Destination..." 
                         value={search}
                         onChange={e => setSearch(e.target.value)}
-                        className="bg-transparent outline-none w-full font-bold text-slate-900 placeholder-slate-400 text-sm md:text-base"
+                        className="bg-transparent outline-none w-full font-bold text-slate-900 placeholder-slate-400 text-xs sm:text-base"
                     />
                 </div>
                 <div className="bg-white rounded-xl flex items-center px-6 py-4 w-48 border-l border-slate-100 hidden md:flex">
                      <input type="date" className="bg-transparent outline-none w-full font-bold text-slate-900" />
                 </div>
-                <button onClick={() => alert('Searching best properties...')} className="w-full md:w-auto bg-sky-500 hover:bg-sky-600 text-white font-black uppercase tracking-widest py-3 md:py-4 px-10 rounded-xl transition-all shadow-lg shadow-sky-500/30 text-xs md:text-base">
-                    Explore
+                <button onClick={() => alert('Searching best properties...')} className="w-full md:w-auto bg-sky-500 hover:bg-sky-600 text-white font-black uppercase tracking-widest py-3 md:py-4 px-10 rounded-xl transition-all shadow-lg shadow-sky-500/30 text-[10px] xs:text-xs md:text-base">
+                    Explore Now
                 </button>
             </div>
         </div>
