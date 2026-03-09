@@ -14,7 +14,9 @@ import {
   Phone,
   BarChart4,
   Menu,
-  X
+  X,
+  Target,
+  Code
 } from "lucide-react";
 
 export default function AiSolutions() {
