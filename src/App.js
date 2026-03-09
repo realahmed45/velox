@@ -8,7 +8,7 @@ import Projects from "./components/Projects";
 import AiSolutions from "./components/AiSolutions";
 import Contact from "./components/Contact";
 import Pricing from './components/Pricing';
-import AboutAutomation from './components/AboutAutomation';
+import AboutChatbots from './components/AboutChatbots';
 import WhatsAppFAB from './components/WhatsAppFAB';
 import VeloxChatWidget from './components/VeloxChatWidget';
 import EcommercePlatform from "./projects/EcommercePlatform";
@@ -36,7 +36,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/pricing" element={<Pricing />} />
-            <Route path="/what-is-automation" element={<AboutAutomation />} />
+            <Route path="/what-is-automation" element={<AboutChatbots />} />
             <Route path="/projects/ecommerce" element={<EcommercePlatform />} />
             <Route path="/projects/saas-dashboard" element={<SaasDashboard />} />
             <Route path="/projects/restaurant" element={<RestaurantWebsite />} />

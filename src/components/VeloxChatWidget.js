@@ -17,15 +17,23 @@ export default function VeloxChatWidget() {
   }, [messages, isTyping]);
 
   const knowledgeBase = {
-    "pricing": "Our chatbot setup starts at Rs. 45,000 with a Rs. 4,500 monthly maintenance fee. We also offer Web artifacts starting at Rs. 35,000.",
-    "whatsapp": "We specialize in WhatsApp Cloud API bots that can handle sales, bookings, and customer support 24/7 with human-like intelligence.",
-    "telegram": "Our Telegram bots are perfect for communities and high-velocity data retrieval systems.",
-    "services": "We provide AI Chatbot Ecosystems (WhatsApp, Telegram, Web) and High-Performance Web Artifacts.",
+    "ecommerce": "E-commerce dominance requires a 4-pillar strategy: 1. WhatsApp Catalog Integration, 2. Abandoned Cart Recovery (automated reminders), 3. Instant Checkout via Chat, and 4. 24/7 Support. We architect all four.",
+    "e-commerce": "For stores, we implement automated product discovery, direct-to-WhatsApp ordering, and real-time shipping updates. This reduces customer friction by 70%.",
+    "catalog": "We sync your Shopify, WooCommerce, or custom database with WhatsApp Business Catalog so users can shop without leaving the app.",
+    "pricing": "Our chatbot setup starts at Rs. 45,000 with a Rs. 4,500 monthly maintenance fee. We also offer Web artifacts starting at Rs. 35,000. Custom enterprise neural bots are priced after a strategic audit.",
+    "whatsapp": "We specialize in WhatsApp Cloud API bots. Unlike basic 'Green Tick' bots, our systems have neural logic for sales, complex bookings, and multi-turn human-like conversations.",
+    "telegram": "Telegram is ideal for high-velocity signal groups, crypto-ecosystems, and massive broadcast channels. We build bots that manage 100k+ members autonomously.",
+    "services": "We provide AI Chatbot Ecosystems (WhatsApp, Telegram, Web, Instagram) and High-Performance Web Artifacts designed for the Pakistani market.",
     "contact": "You can reach our lead engineers via the 'Reach Out' section or directly on WhatsApp at +92 332 9945014.",
-    "hello": "Hello! I am ready to help you architect your chatbot strategy.",
-    "hi": "Hi there! How can Velox help your business today?",
-    "pakistan": "We are proudly serving the Pakistani market with specialized local logic and PKR pricing.",
-    "owner": "Velox is lead by a specialized engineering unit focused on autonomous intelligence.",
+    "pakistan": "We are the leading unit for chatbot excellence in Pakistan, focusing on PKR pricing and local market conversion logic.",
+    "checkout": "We automate the checkout process. The bot collects Name, Address, and Payment proof directly in the chat, syncing it instantly to your backend.",
+    "cart": "Forgotten items? Our bots send personalized reminders to customers who abandoned their cart, recovering up to 25% of lost revenue.",
+    "support": "Our bots handle 90% of common support tickets (where is my order?, return policy, etc.) instantly, escalating only complex issues to your human team.",
+    "real estate": "For real estate, our bots qualify leads, share floor plans, and schedule site visits autonomously.",
+    "healthcare": "Our medical bots handle patient triage, appointment scheduling, and prescription reminders with absolute precision.",
+    "how to": "To automate your business, we first map your customer journey, then architect the logic using Python/n8n, and finally deploy the bot on your preferred channel (WhatsApp/Telegram).",
+    "hello": "Peace! I am the Velox Intelligence Unit. Ask me about E-commerce bots, WhatsApp APIs, or PKR pricing.",
+    "hi": "Hi there! Ready to dominate your market? I can explain how our chatbots can 10x your engagement.",
   };
 
   const handleSend = () => {
@@ -38,10 +46,13 @@ export default function VeloxChatWidget() {
 
     // Simulate AI logic
     setTimeout(() => {
-      let response = "That is an interesting inquiry. Our engineers can definitely help with that. Would you like to discuss this on WhatsApp for a refined proposal?";
+      let response = "That is an interesting inquiry regarding chatbot ecosystems. Our engineers specialize in bespoke logic for this. Would you like to discuss this on WhatsApp for a refined strategic proposal?";
       
       const lowerInput = userMessage.toLowerCase();
-      for (const key in knowledgeBase) {
+      
+      // Better matching: prioritize longer matches
+      const keys = Object.keys(knowledgeBase).sort((a, b) => b.length - a.length);
+      for (const key of keys) {
         if (lowerInput.includes(key)) {
           response = knowledgeBase[key];
           break;

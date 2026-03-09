@@ -11,7 +11,7 @@ import {
   ArrowRight
 } from "lucide-react";
 
-export default function AboutAutomation() {
+export default function AboutChatbots() {
   const [scrollY, setScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const whatsappLink = "https://wa.me/923329945014";
@@ -54,11 +54,11 @@ export default function AboutAutomation() {
   ];
 
   const glossary = [
-    { term: "LLM", def: "Large Language Model. The 'brain' behind AI like ChatGPT." },
-    { term: "RAG", def: "Retrieval-Augmented Generation. Connecting AI to *your* private business data securely." },
-    { term: "API", def: "The bridge that allows two different pieces of software to talk to each other." },
-    { term: "Agentic AI", def: "AI that can take actions and complete multi-step goals, not just answer questions." },
-    { term: "Webhook", def: "A real-time signal sent between apps to trigger an automation instantly." }
+    { term: "Chatbot Ecosystem", def: "A multi-platform network of bots (WhatsApp, Web, Telegram) working together to manage your business." },
+    { term: "WhatsApp API", def: "The enterprise-grade bridge allowing us to build ultra-fast, neural bots with Green Tick and Catalog features." },
+    { term: "Cart Recovery", def: "A strategic bot sequence that reminds users about unpurchased items, proven to recover 20% + of revenue." },
+    { term: "Agentic Logic", def: "Chatbots that can solve problems and take actions (checking stock, booking dates) instead of just talking." },
+    { term: "E-com Sync", def: "The process of connecting your Shopify/WooCommerce store directly to a WhatsApp shopping bot." }
   ];
 
   return (
@@ -114,7 +114,7 @@ export default function AboutAutomation() {
                 <span className="text-[#FF6B00] not-italic">CHATBOTS</span>
               </h1>
               <p className="text-lg md:text-2xl text-gray-500 font-medium max-w-xl leading-relaxed mb-10 md:mb-12 italic mx-auto lg:mx-0 px-4">
-                From basic triggers to autonomous neural systems—learn how we engineer the systems that liberate your time.
+                From basic triggers to autonomous neural systems—learn how we engineer the chatbots that dominate your market.
               </p>
               <a href={whatsappLink} className="px-10 md:px-12 py-5 md:py-6 bg-black text-white font-black uppercase tracking-widest text-xs rounded-sm hover:bg-[#FF6B00] transition-all inline-flex items-center gap-4 justify-center">
                 Reach Out <ArrowRight size={18} />
@@ -125,7 +125,7 @@ export default function AboutAutomation() {
                <div className="relative overflow-hidden rounded-sm border-4 border-black shadow-2xl bg-black max-w-xl mx-auto">
                   <img 
                     src="/assets/automation.png" 
-                    alt="Automation Systems" 
+                    alt="Chatbot Systems" 
                     className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
                   />
                </div>
@@ -183,15 +183,19 @@ export default function AboutAutomation() {
            </div>
             <div className="p-8 md:p-12 bg-black text-white rounded-sm relative overflow-hidden">
                <div className="absolute top-0 right-0 w-64 h-64 bg-[#FF6B00]/10 blur-[80px]" />
-               <h3 className="text-2xl md:text-3xl font-black italic uppercase mb-10 md:mb-12 text-[#FF6B00]">Strategic Glossary</h3>
+               <h3 className="text-2xl md:text-3xl font-black italic uppercase mb-10 md:mb-12 text-[#FF6B00]">Chatbot Strategy FAQ</h3>
                <div className="space-y-6 md:space-y-8">
-                  {glossary.map((it, i) => (
+                  {[
+                    { q: "Is WhatsApp the best for my store?", a: "Yes. In Pakistan, WhatsApp has a 95% open rate. Selling through chat is significantly faster than traditional web checkouts." },
+                    { q: "How long to build an ecosystem?", a: "A standard WhatsApp + Web ecosystem is architected and deployed within 14-21 engineering days." },
+                    { q: "Can it handle 10,000 customers?", a: "Absolutely. Our neural infrastructure is built for high-velocity, massive scale. Automation handles the volume effortlessly." },
+                    { q: "Do you integrate with Shopify?", a: "Full integration. We sync your real-time inventory to the bot so your pricing and stock are always accurate." }
+                  ].map((it, i) => (
                     <div key={i} className="border-b border-white/5 pb-5 md:pb-6 last:border-0 group cursor-help">
                        <div className="flex items-center gap-4 mb-2">
-                          <span className="text-xs md:text-sm font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-white group-hover:text-[#FF6B00] transition-colors">{it.term}</span>
-                          <ArrowRight size={12} className="text-[#FF6B00] opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0" />
+                          <span className="text-xs md:text-sm font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-white group-hover:text-[#FF6B00] transition-colors">{it.q}</span>
                        </div>
-                       <p className="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase tracking-widest leading-relaxed">{it.def}</p>
+                       <p className="text-[9px] md:text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-relaxed italic">{it.a}</p>
                     </div>
                   ))}
                </div>

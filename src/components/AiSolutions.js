@@ -31,90 +31,83 @@ export default function AiSolutions() {
 
   const industries = [
     {
+      name: "E-commerce",
+      useCase: "Shopping Ecosystem",
+      problem: "High cart abandonment and customer support overload.",
+      solution: "Bespoke WhatsApp Catalogs with automated cart recovery sequences and instant chat-based checkout syncing to Shopify.",
+      outcome: "30% Revenue Recovery"
+    },
+    {
       name: "Real Estate",
-      useCase: "Lead Velocity Agent",
-      problem: "80% of leads go cold because support doesn't respond within 5 minutes.",
-      solution: "A custom Velox AI Agent that parses Zillow/website leads, asks qualifying questions (budget, move-in date), and autonomously books viewings onto the agent's calendar 24/7.",
-      outcome: "300% increase in lead conversion; 0% response delay."
+      useCase: "Lead Intelligence",
+      problem: "Agents overwhelmed by low-quality inquiries and manual scheduling.",
+      solution: "Neural bots that qualify leads via chat, share project documents, and book site visits autonomously into calendars.",
+      outcome: "90% Lead Qualification"
     },
     {
       name: "Healthcare",
-      useCase: "Autonomous Scheduler",
-      problem: "Manual appointment booking is prone to errors and consumes 40% of admin time.",
-      solution: "Voice + Chat AI integrated with EHR systems. Patients can book, cancel, or reschedule through natural conversation. The AI also sends logic-based follow-ups for pre-op instructions.",
-      outcome: "Admin costs reduced by 60%; appointment no-shows dropped by 45%."
+      useCase: "Patient Triage",
+      problem: "Reception bottlenecks and appointment no-shows.",
+      solution: "WhatsApp triage bots that handle scheduling, symptom checking, and automated pre-op reminders.",
+      outcome: "60% Admin Reduction"
     },
     {
-      name: "E-commerce & Retail",
-      useCase: "Cognitive Sales Engine",
-      problem: "Customers drop off when they can't find specific products or have shipping questions.",
-      solution: "An LLM-driven shopping assistant with 120+ language support. It doesn't just answer questions; it cross-sells based on real-time inventory and customer sentiment analysis.",
-      outcome: "Average Order Value (AOV) increased by 22%; support tickets reduced by 70%."
+      name: "Automotive",
+      useCase: "Sales Acceleration",
+      problem: "Slow response times to showroom inquiries and test-drive bookings.",
+      solution: "Voice + Chat bots that handle test-drive scheduling and share car specs instantly across all platforms.",
+      outcome: "2.5x Sales Velocity"
     },
     {
-      name: "SaaS & Tech",
-      useCase: "Zero-Touch Onboarding",
-      problem: "Users churn if they don't reach the 'Aha!' moment quickly during trials.",
-      solution: "Agentic workflows triggered by user behavior. If a user gets stuck in a specific module, the AI sends a hyper-personalized video tutorial or reaches out with a specific fix via Slack/Email.",
-      outcome: "Trial-to-Paid conversion increased by 35%."
+      name: "Hospitality",
+      useCase: "Concierge Bot",
+      problem: "Guests waiting for front-desk assistance for basic queries.",
+      solution: "Bespoke hotel bots that handle room service orders, spa bookings, and local recommendations via WhatsApp.",
+      outcome: "Zero Front-Desk Friction"
     },
     {
-      name: "Legal & Professional",
-      useCase: "Doc-Intelligence Pipeline",
-      problem: "Paralegals spend hundreds of hours manually reviewing contracts for specific clauses.",
-      solution: "A recursive RAG (Retrieval-Augmented Generation) system that parses thousands of documents in seconds, flagging anomalies and auto-generating summaries with 99.8% accuracy.",
-      outcome: "Case research speed increased by 10x; zero human-error risk."
+      name: "Financial Services",
+      useCase: "Portfolio Assistant",
+      problem: "Clients needing real-time updates and basic account actions.",
+      solution: "Highly secure bots for balance checks, transaction alerts, and document collection for loan processing.",
+      outcome: "80% Self-Service rate"
     },
     {
-      name: "Logistics",
-      useCase: "Fleet Intelligence Bot",
-      problem: "Coordinating with 100+ drivers manually leads to communication breakdowns.",
-      solution: "Voice AI agents that autonomously check in with drivers, update delivery statuses in the ERP, and notify customers of real-time ETA shifts without human dispatcher intervention.",
-      outcome: "Dispatcher efficiency increased by 4x; customer satisfaction up 50%."
+      name: "Education",
+      useCase: "Student Support Bot",
+      problem: "Institutions struggling with high-volume admissions and FAQ queries.",
+      solution: "AI tutors that answer course queries, help with enrollment, and send automated class reminders.",
+      outcome: "70% Query Automation"
     },
     {
-      name: "Education & EdTech",
-      useCase: "Adaptive Neural Tutor",
-      problem: "Standard online courses have high drop-out rates due to lack of personalization.",
-      solution: "An AI tutor that analyzes a student's gaze (via web-cam if permitted) or typing speed to detect frustration. It then shifts the difficulty of the material in real-time.",
-      outcome: "Course completion rates increased by 65%; student retention up 80%."
-    },
-    {
-      name: "Finance & Fintech",
-      useCase: "Risk-Pulse Agent",
-      problem: "Manual KYC/AML checks take 3-5 days, slowing down user acquisition.",
-      solution: "Agentic workflows that autonomously verify documents against global databases, screen for PEPs, and assign a risk score in under 60 seconds.",
-      outcome: "Onboarding speed increased by 95%; zero compliance leakage."
-    },
-    {
-      name: "Manufacturing",
-      useCase: "Predictive Maintenance AI",
-      problem: "Unscheduled downtime costs factories millions per hour.",
-      solution: "IOT data stream parsed by a local AI instance. The AI detects rhythmic anomalies in machinery and autonomously orders spare parts and logs a maintenance ticket before a failure occurs.",
-      outcome: "Maintenance costs reduced by 30%; critical downtime eliminated."
+      name: "Corporate HR",
+      useCase: "Employee Pulse",
+      problem: "HR teams spending hours on basic policy questions and onboarding.",
+      solution: "Internal company bots that handle leaves, document requests, and employee onboarding training modules.",
+      outcome: "50% HR Time Saved"
     }
   ];
 
   const faqs = [
     {
-      q: "What is n8n and why do you use it?",
-      a: "n8n is a powerful workflow automation tool that allows us to build 'Agentic Workflows'—complex, multi-step automations that can handle logic, branching, and error recovery better than simple tools like Zapier. We use it to create the 'connective tissue' between your AI, your CRM, and your business apps."
+      q: "What platforms do you support?",
+      a: "We architect ecosystems across WhatsApp (Cloud API), Telegram, Instagram, and Web. All bots are synced to a single source of truth for your business data."
     },
     {
-      q: "Is my data safe when using AI models?",
-      a: "Yes. For premium clients, we implement 'Enterprise Private AI' modules where data remains within your private VPC or secure instances. We follow HIPAA and GDPR standards, ensuring that models are never trained on your proprietary data."
+      q: "How does the bot help with E-commerce Sales?",
+      a: "By allowing customers to browse catalogs and checkout directly in-chat. We reduce friction by eliminating the need to visit a website for simple purchases."
     },
     {
-      q: "How long until I see a return on investment (ROI)?",
-      a: "Most Velox AI modules pay for themselves within 3 to 6 months by drastically reducing manual operational costs (OpEx) or reclaiming lost revenue from unconverted leads."
+      q: "Is the AI 'smart' enough for complex queries?",
+      a: "Yes. We don't build keyword-based bots. Our neural agents use advanced NLP to understand intent, sentiment, and deep business context."
     },
     {
-      q: "Do I need technical knowledge to manage the AI?",
-      a: "No. We provide 'Invisible Infrastructure.' We handle the engineering, fine-tuning, and monitoring. You receive a clean dashboard to track performance and results."
+      q: "Can I integrate it with my current CRM?",
+      a: "Fully. We build the bridges between your bot and tools like HubSpot, Salesforce, or custom databases to ensure zero data leakage."
     },
     {
-      q: "Can the AI handle my specific business logic?",
-      a: "Absolutely. We don't provide 'out of the box' bots. We architect 'Neural Clones' of your business logic through fine-tuning and advanced prompt engineering, ensuring the AI behaves exactly like your top-performing employee."
+      q: "What is the ROI for a chatbot?",
+      a: "Most businesses see a 20-40% increase in lead conversion and a 70% reduction in support admin time within the first 90 days."
     }
   ];
 
@@ -185,12 +178,15 @@ export default function AiSolutions() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
                 {[
-                  { icon: <MessageSquare />, title: "WhatsApp Bots", d: "WhatsApp Cloud API agents that handle sales, support, and lead qualification 24/7." },
-                  { icon: <Workflow />, title: "Telegram Ecosystems", d: "High-velocity bots for data management, broadcast systems, and community intelligence." },
-                  { icon: <Phone />, title: "Voice AI Bots", d: "Human-clone voice bots for high-volume Pakistan market sales calls and inquiries." },
-                  { icon: <Database />, title: "Website Chat Tools", d: "Custom on-site chat instances with full RAG knowledge of your business." },
-                  { icon: <Zap />, title: "Instagram Automation", d: "Automated DM flows that convert followers into customers through intelligent logic." },
-                  { icon: <BarChart4 />, title: "Dashboard Sync", d: "Connect your bots to real-time dashboards to track lead velocity and conversion." }
+                  { icon: <MessageSquare />, title: "E-commerce Ecosystems", d: "Catalog sync, Checkout automation, and Abandoned Cart recovery via WhatsApp & Instagram." },
+                  { icon: <Workflow />, title: "Telegram Communities", d: "Massive scale broadcast bots, member management, and high-velocity signal distribution." },
+                  { icon: <Phone />, title: "Neural Voice Agents", d: "Human-clone voice bots for automated sales calls and customer inquiry resolution in Pakistan." },
+                  { icon: <Database />, title: "Intelligent Web Chat", d: "Custom on-site chat tools with deep RAG knowledge of your business documentation." },
+                  { icon: <Zap />, title: "Real Estate Agents", d: "Autonomously qualify property leads, share floor-plans, and schedule site viewings 24/7." },
+                  { icon: <BarChart4 />, title: "Lead Generation Hub", d: "Messenger & DM bots that convert social traffic into qualified leads through interactive logic." },
+                  { icon: <Target />, title: "Healthcare Triage", d: "Patient symptom checker, appointment scheduling, and automated prescription reminders." },
+                  { icon: <Cpu />, title: "Corporate HR Bots", d: "Automated employee onboarding, FAQ handling, and policy query resolution for large firms." },
+                  { icon: <Code />, title: "Custom API Integration", d: "Bots that pull data from your ERP/CRM to provide real-time status updates on any platform." }
                 ].map((item, i) => (
                   <div key={i} className="bg-black p-8 md:p-12 group hover:bg-[#FF6B00]/5 transition-all duration-500">
                      <div className="text-[#FF6B00] mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
@@ -317,8 +313,8 @@ export default function AiSolutions() {
       <section className="py-32 px-6 bg-[#0a0a0a] border-t border-white/5">
          <div className="max-w-4xl mx-auto">
             <div className="text-center mb-24">
-               <h2 className="text-5xl md:text-8xl font-black italic uppercase tracking-tighter text-white mb-6">INTELLIGENCE <span className="text-[#FF6B00]">FAQ</span></h2>
-               <p className="text-gray-500 font-bold uppercase tracking-[0.2em]">Everything you need to know about the transition.</p>
+                <h3 className="text-3xl md:text-5xl font-black italic uppercase mb-8">BUILD YOUR <br/><span className="text-[#FF6B00]">BOT EMPIRE.</span></h3>
+                <p className="text-gray-400 font-medium mb-10 leading-relaxed">Don't settle for basic automation. Build a neural chatbot ecosystem that works for you.</p>
             </div>
 
             <div className="space-y-6">
