@@ -127,8 +127,8 @@ export default function AiSolutions() {
             <span className="text-black">VELOX</span><span className="text-[#FF6B00]">.</span>
           </Link>
           <div className="hidden lg:flex items-center gap-10">
-            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-[#FF6B00]">AI Solutions</Link>
-            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Automation Lab</Link>
+            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-[#FF6B00]">Chatbot Solutions</Link>
+            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Chatbot Lab</Link>
             <Link to="/projects" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Web Artifacts</Link>
             <Link to="/pricing" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Pricing</Link>
             <Link to="/contact" className="px-10 py-5 bg-[#FF6B00] text-white font-black text-[14px] uppercase tracking-widest hover:bg-black transition-all rounded-sm shadow-xl shadow-[#FF6B00]/20">Reach Out</Link>
@@ -145,8 +145,8 @@ export default function AiSolutions() {
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-[110] bg-black transition-all duration-700 flex flex-col items-center justify-center gap-10 ${mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
-          <Link to="/ai-solutions" className="text-4xl font-black text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>AI Solutions</Link>
-          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Automation Lab</Link>
+          <Link to="/ai-solutions" className="text-4xl font-black text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Solutions</Link>
+          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Lab</Link>
           <Link to="/projects" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Web Artifacts</Link>
           <Link to="/pricing" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
           <Link to="/contact" className="px-16 py-6 bg-[#FF6B00] text-white font-black text-xl uppercase tracking-widest rounded-sm mt-10" onClick={() => setMobileMenuOpen(false)}>Reach Out</Link>
@@ -164,10 +164,10 @@ export default function AiSolutions() {
                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-black">Deep Intelligence Architecture</span>
             </div>
             <h1 className="text-4xl md:text-[140px] font-black tracking-tighter leading-[1] md:leading-[0.85] italic uppercase mb-8 md:mb-12 text-black px-2 md:px-0">
-               AUTONOMOUS<br/><span className="text-[#FF6B00]">INTELLIGENCE</span>
+               DOMINANT<br/><span className="text-[#FF6B00]">CHATBOTS</span>
             </h1>
             <p className="text-xl md:text-3xl text-gray-600 max-w-5xl mx-auto font-medium leading-relaxed italic uppercase tracking-wider px-4">
-               We architect bespoke <span className="text-black font-bold border-b-2 border-[#FF6B00]">Neural Units</span> designed to dominate your market through absolute efficiency.
+               We architect bespoke <span className="text-black font-bold border-b-2 border-[#FF6B00]">WhatsApp & Telegram Ecosystems</span> designed to dominate your market through absolute efficiency.
             </p>
          </div>
       </header>
@@ -177,20 +177,20 @@ export default function AiSolutions() {
          <div className="max-w-[1400px] mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-10 mb-16 md:mb-24 text-white">
                <div className="max-w-3xl">
-                  <h2 className="text-3xl sm:text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none mb-4 md:mb-8">THE SPECTRUM OF<br/><span className="text-[#FF6B00] not-italic">AUTOMATION</span></h2>
-                  <p className="text-gray-400 text-sm sm:text-lg md:text-xl font-medium max-w-xl uppercase tracking-widest leading-relaxed">From n8n agentic workflows to full-scale LLM integrations.</p>
+                  <h2 className="text-3xl sm:text-5xl md:text-8xl font-black tracking-tighter italic uppercase leading-none mb-4 md:mb-8">THE SPECTRUM OF<br/><span className="text-[#FF6B00] not-italic">CHATBOTS</span></h2>
+                  <p className="text-gray-400 text-sm sm:text-lg md:text-xl font-medium max-w-xl uppercase tracking-widest leading-relaxed">From WhatsApp Cloud API to full-scale Telegram neural integrations.</p>
                </div>
                <div className="px-6 md:px-10 py-3 md:py-5 border border-white/10 bg-white/5 text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.4em] text-[#FF6B00]">Unit 01: Core Infra</div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 border border-white/5">
                 {[
-                  { icon: <MessageSquare />, title: "Recursive Chatbots", d: "LLM agents that remember past interactions and use tools (APIs) to solve problems." },
-                  { icon: <Workflow />, title: "n8n Agentic Workflows", d: "Complex multi-module automations that autonomously route data and tasks." },
-                  { icon: <Phone />, title: "AI Voice Agents", d: "Ultra-low latency human-clone voice for sales, booking, and high-frequency support." },
-                  { icon: <Database />, title: "RAG Knowledge Bases", d: "Private retrieval-augmented generation systems that know your entire documentation." },
-                  { icon: <Zap />, title: "Sales Auto-Outreach", d: "Personalized cold outreach engines that research prospects at scale via LinkedIn/Email." },
-                  { icon: <BarChart4 />, title: "Intelligent ETL", d: "Automated Data Extraction, Transformation, and Visualization for real-time BI." }
+                  { icon: <MessageSquare />, title: "WhatsApp Bots", d: "WhatsApp Cloud API agents that handle sales, support, and lead qualification 24/7." },
+                  { icon: <Workflow />, title: "Telegram Ecosystems", d: "High-velocity bots for data management, broadcast systems, and community intelligence." },
+                  { icon: <Phone />, title: "Voice AI Bots", d: "Human-clone voice bots for high-volume Pakistan market sales calls and inquiries." },
+                  { icon: <Database />, title: "Website Chat Tools", d: "Custom on-site chat instances with full RAG knowledge of your business." },
+                  { icon: <Zap />, title: "Instagram Automation", d: "Automated DM flows that convert followers into customers through intelligent logic." },
+                  { icon: <BarChart4 />, title: "Dashboard Sync", d: "Connect your bots to real-time dashboards to track lead velocity and conversion." }
                 ].map((item, i) => (
                   <div key={i} className="bg-black p-8 md:p-12 group hover:bg-[#FF6B00]/5 transition-all duration-500">
                      <div className="text-[#FF6B00] mb-6 md:mb-8 group-hover:scale-110 transition-transform duration-500">{item.icon}</div>
@@ -215,8 +215,8 @@ export default function AiSolutions() {
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="text-center mb-16 md:mb-24">
             <div className="text-[#FF6B00] font-black uppercase tracking-[0.6em] text-[10px] md:text-[12px] mb-6 md:mb-8">Conceptual Blueprint</div>
-            <h2 className="text-4xl md:text-8xl font-black italic uppercase tracking-tighter mb-8 md:mb-10">ANATOMY OF <br/><span className="text-[#FF6B00]">AUTOMATION</span></h2>
-            <p className="text-gray-500 font-bold uppercase tracking-widest text-sm md:text-lg px-4">Understanding the neural transformation of your data.</p>
+            <h2 className="text-4xl md:text-8xl font-black italic uppercase tracking-tighter mb-8 md:mb-10">ANATOMY OF A <br/><span className="text-[#FF6B00]">BOT</span></h2>
+            <p className="text-gray-500 font-bold uppercase tracking-widest text-sm md:text-lg px-4">Understanding the neural transformation of your engagement.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">

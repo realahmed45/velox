@@ -24,32 +24,32 @@ export default function Pricing() {
 
   const automationPricing = [
     {
-      tier: "Micro Bot",
-      setup: "$219",
-      monthly: "$29",
+      tier: "Starter Bot",
+      setup: "Rs. 45,000",
+      monthly: "Rs. 4,500",
       desc: "Perfect for local businesses starting with 1-2 daily tasks.",
       features: [
         "1 Custom AI Agent",
-        "Sync Every 4 Hours",
-        "Standard CRM Link",
+        "WhatsApp/Telegram Sync",
+        "Lead Capture Logic",
         "Priority Support"
       ],
       notIncluded: [
         "Neural Decision Logic",
-        "24/7 Monitoring"
+        "Multi-Platform Hub"
       ]
     },
     {
-      tier: "Business Scale",
-      setup: "$769",
-      monthly: "$69",
+      tier: "Pro Ecosystem",
+      setup: "Rs. 145,000",
+      monthly: "Rs. 12,500",
       popular: true,
       desc: "Comprehensive logic for multi-department operations.",
       features: [
-        "5 Logic Agents",
-        "Real-time Data Sync",
-        "Complex n8n Workflows",
-        "Slack Integration",
+        "5 Specialized Bots",
+        "Cross-Platform Sync",
+        "WhatsApp Cloud API",
+        "CRM & Slack Link",
         "Dedicated Architect"
       ],
       notIncluded: [
@@ -57,16 +57,16 @@ export default function Pricing() {
       ]
     },
     {
-      tier: "Elite Core",
-      setup: "$1,649+",
-      monthly: "$149",
+      tier: "Elite Neural",
+      setup: "Rs. 350,000+",
+      monthly: "Rs. 25,000",
       desc: "Autonomous infrastructure for high-volume enterprises.",
       features: [
         "Unlimited Neural Agents",
-        "Autonomous Decision Logic",
-        "Dedicated System Architect",
+        "Full Platform Integration",
+        "Autonomous Logic Units",
         "24/7 Priority Support",
-        "Bank-Grade Security"
+        "Custom Fine-tuning"
       ],
       notIncluded: []
     }
@@ -74,9 +74,9 @@ export default function Pricing() {
 
   const webPricing = [
     {
-      tier: "High-Performance Landing",
-      setup: "$149",
-      monthly: "$19",
+      tier: "Standard Landing",
+      setup: "Rs. 35,000",
+      monthly: "Rs. 4,500",
       desc: "Ultra-fast, conversion-optimized engineering.",
       features: [
         "Bespoke Visual Design",
@@ -90,9 +90,9 @@ export default function Pricing() {
       ]
     },
     {
-      tier: "Full-Stack Artifact",
-      setup: "$499",
-      monthly: "$39",
+      tier: "Business Artifact",
+      setup: "Rs. 95,000",
+      monthly: "Rs. 8,500",
       popular: true,
       desc: "Complete business environments with functional depth.",
       features: [
@@ -100,16 +100,16 @@ export default function Pricing() {
         "User Auth & Database",
         "Full CRM Integration",
         "Premium Visual Effects",
-        "3 Months Engineering Support"
+        "3 Months Support"
       ],
       notIncluded: [
         "Enterprise Load Balancing"
       ]
     },
     {
-      tier: "Bespoke SaaS",
-      setup: "$999+",
-      monthly: "$89",
+      tier: "Custom SaaS",
+      setup: "Rs. 250,000+",
+      monthly: "Rs. 15,000",
       desc: "Complex, scalable platforms for new market entries.",
       features: [
         "Microservices Architecture",
@@ -134,8 +134,8 @@ export default function Pricing() {
           </Link>
           
           <div className="hidden md:flex items-center gap-12">
-            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.3em] hover:text-[#FF6B00] transition-colors">AI Solutions</Link>
-            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.3em] hover:text-[#FF6B00] transition-colors">Automation Lab</Link>
+            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] hover:text-[#FF6B00] transition-colors">Chatbot Solutions</Link>
+            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] hover:text-[#FF6B00] transition-colors">Chatbot Lab</Link>
             <Link to="/projects" className="text-[14px] font-black uppercase tracking-[0.3em] hover:text-[#FF6B00] transition-colors">Web Artifacts</Link>
             <Link to="/pricing" className="text-[14px] font-black uppercase tracking-[0.3em] text-[#FF6B00]">Pricing</Link>
             <Link to="/contact" className="px-10 py-5 bg-[#FF6B00] text-white font-black text-[14px] uppercase tracking-widest hover:bg-black transition-all rounded-sm">Reach Out</Link>
@@ -153,8 +153,8 @@ export default function Pricing() {
 
       {/* Mobile Menu */}
       <div className={`fixed inset-0 z-[110] bg-black transition-all duration-700 flex flex-col items-center justify-center gap-10 ${mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
-          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>AI Solutions</Link>
-          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Automation Lab</Link>
+          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Solutions</Link>
+          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Lab</Link>
           <Link to="/projects" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Web Artifacts</Link>
           <Link to="/pricing" className="text-4xl font-black text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
           <Link to="/contact" className="px-16 py-6 bg-[#FF6B00] text-white font-black text-xl uppercase tracking-widest rounded-sm mt-10" onClick={() => setMobileMenuOpen(false)}>Reach Out</Link>
@@ -183,7 +183,7 @@ export default function Pricing() {
                 onClick={() => setActiveCategory("automation")}
                 className={`flex items-center justify-center gap-3 px-6 md:px-10 py-4 font-black uppercase tracking-widest text-[10px] md:text-xs transition-all ${activeCategory === "automation" ? 'bg-[#FF6B00] text-white shadow-lg' : 'text-gray-500 hover:text-white'}`}
               >
-                <Bot size={16} /> Automation Ops
+                <Bot size={16} /> Chatbot Ecosystems
               </button>
               <button 
                 onClick={() => setActiveCategory("web")}

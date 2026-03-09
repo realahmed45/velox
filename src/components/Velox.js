@@ -61,8 +61,8 @@ export default function VeloxResponsive() {
           </Link>
           
           <div className="hidden lg:flex items-center gap-10">
-            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">AI Solutions</Link>
-            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Automation Lab</Link>
+            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Chatbot Solutions</Link>
+            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Chatbot Lab</Link>
             <Link to="/projects" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Web Artifacts</Link>
             <Link to="/pricing" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Pricing</Link>
             <Link to="/contact" className="px-10 py-5 bg-[#FF6B00] text-white font-black text-[14px] uppercase tracking-widest hover:bg-black transition-all rounded-sm shadow-lg shadow-[#FF6B00]/20">Reach Out</Link>
@@ -80,8 +80,8 @@ export default function VeloxResponsive() {
 
       {/* Mobile Menu */}
       <div className={`fixed inset-0 z-[90] bg-black transition-all duration-700 flex flex-col items-center justify-center gap-10 ${mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
-          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>AI Solutions</Link>
-          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Automation Lab</Link>
+          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Solutions</Link>
+          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Lab</Link>
           <Link to="/projects" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Web Artifacts</Link>
           <Link to="/pricing" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
           <Link to="/contact" className="px-16 py-6 bg-[#FF6B00] text-white font-black text-xl uppercase tracking-widest rounded-sm mt-10" onClick={() => setMobileMenuOpen(false)}>Reach Out</Link>
@@ -142,7 +142,7 @@ export default function VeloxResponsive() {
           </div>
 
           <p className="text-xl md:text-3xl text-black font-bold max-w-5xl mx-auto mb-16 md:mb-24 leading-snug md:leading-[1.2] animate-fadeInUp tracking-tight px-4" style={{ animationDelay: '0.3s' }}>
-            A precision engineering studio architecting <span className="text-[#FF6B00] underline decoration-2 md:decoration-4 underline-offset-4 md:underline-offset-8">Autonomous Neural Systems</span> and <span className="text-[#FF6B00] underline decoration-2 md:decoration-4 underline-offset-4 md:underline-offset-8">High-Velocity Web Ecosystems</span>.
+            A precision engineering studio architecting <span className="text-[#FF6B00] underline decoration-2 md:decoration-4 underline-offset-4 md:underline-offset-8">Masterclass Chatbot Ecosystems</span> and <span className="text-[#FF6B00] underline decoration-2 md:decoration-4 underline-offset-4 md:underline-offset-8">High-Velocity Web Ecosystems</span>.
           </p>
           
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-6 md:gap-10 animate-fadeInUp px-4 md:px-0" style={{ animationDelay: '0.4s' }}>
@@ -157,8 +157,8 @@ export default function VeloxResponsive() {
 
         {/* Technical Decor */}
         <div className="absolute bottom-10 left-12 hidden lg:flex flex-col gap-2 opacity-20">
-          <div className="text-[10px] font-black uppercase tracking-widest text-black">Lat: 25.2048° N</div>
-          <div className="text-[10px] font-black uppercase tracking-widest text-black">Lon: 55.2708° E</div>
+          <div className="text-[10px] font-black uppercase tracking-widest text-black">Lat: 24.8607° N</div>
+          <div className="text-[10px] font-black uppercase tracking-widest text-black">Lon: 67.0011° E</div>
         </div>
       </section>
 

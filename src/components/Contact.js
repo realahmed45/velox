@@ -47,8 +47,8 @@ export default function Contact() {
           </Link>
           
           <div className="hidden lg:flex items-center gap-10">
-            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">AI Solutions</Link>
-            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Automation Lab</Link>
+            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Chatbot Solutions</Link>
+            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Chatbot Lab</Link>
             <Link to="/projects" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Web Artifacts</Link>
             <Link to="/pricing" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-700 hover:text-[#FF6B00] transition-colors">Pricing</Link>
             <Link to="/contact" className="px-10 py-5 bg-[#FF6B00] text-white font-black text-[14px] uppercase tracking-widest hover:bg-black transition-all rounded-sm shadow-xl shadow-[#FF6B00]/20">Reach Out</Link>
@@ -66,8 +66,8 @@ export default function Contact() {
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-[110] bg-black transition-all duration-700 flex flex-col items-center justify-center gap-10 ${mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
-          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>AI Solutions</Link>
-          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Automation Lab</Link>
+          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Solutions</Link>
+          <Link to="/what-is-automation" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Lab</Link>
           <Link to="/projects" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Web Artifacts</Link>
           <Link to="/pricing" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
           <button className="mt-10" onClick={() => setMobileMenuOpen(false)}>

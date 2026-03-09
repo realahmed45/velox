@@ -10,6 +10,7 @@ import Contact from "./components/Contact";
 import Pricing from './components/Pricing';
 import AboutAutomation from './components/AboutAutomation';
 import WhatsAppFAB from './components/WhatsAppFAB';
+import VeloxChatWidget from './components/VeloxChatWidget';
 import EcommercePlatform from "./projects/EcommercePlatform";
 import SaasDashboard from "./projects/SaasDashboard";
 import {
@@ -48,6 +49,7 @@ function App() {
             <Route path="/projects/portfolio" element={<CreativePortfolio />} />
           </Routes>
           <WhatsAppFAB />
+          <VeloxChatWidget />
         </Router>
       </HelmetProvider>
     </div>

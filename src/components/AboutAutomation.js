@@ -25,30 +25,30 @@ export default function AboutAutomation() {
   const levels = [
     {
       level: "Level 1",
-      title: "Beginner: The Concept",
-      desc: "Automation is the delegating of repetitive tasks to software. Think of it as a digital employee that never sleeps, never makes mistakes, and works at light speed.",
-      concepts: ["Efficiency", "Time-Reclaim", "Error-Reduction"],
+      title: "Flow: The Chatbot Concept",
+      desc: "A chatbot is your digital sales representative that never sleeps. It engages customers instantly, answers queries, and qualifies leads while you focus on scaling.",
+      concepts: ["Instant Response", "Lead Capture", "24/7 Availability"],
       icon: <Target className="text-[#FF6B00]" size={32} />
     },
     {
       level: "Level 2",
-      title: "The Root: Basic Scripts",
-      desc: "This is where we connect your tools. When a lead fills a form, they automatically get an email and are added to your spreadsheet. No manual data entry, ever.",
-      concepts: ["Triggers", "Actions", "Integrations"],
+      title: "Sync: Basic Integrations",
+      desc: "We connect your bot to WhatsApp or Telegram. When a customer inquires, they are instantly added to your CRM, and you get a notification on Slack or Email.",
+      concepts: ["WhatsApp API", "CRM Sync", "Instant Alerts"],
       icon: <Zap className="text-[#FF6B00]" size={32} />
     },
     {
       level: "Level 3",
-      title: "Professional: Intelligence",
-      desc: "We integrate AI (LLMs) to read, understand, and categorize data. Your system can now draft personal replies, prioritize tasks, and analyze sentiment.",
-      concepts: ["NLP", "Logic Gates", "Multi-Step Flows"],
+      title: "Brain: Neural Intelligence",
+      desc: "We integrate specialized AI 'Brains' to understand intent. Your bot can now negotiate, handle complex objections, and categorize data with human-like precision.",
+      concepts: ["Intent Detection", "Logic Gates", "RAG Knowledge"],
       icon: <Workflow className="text-[#FF6B00]" size={32} />
     },
     {
       level: "Level 4",
-      title: "Expert: Autonomous Agents",
-      desc: "The pinnacle. Systems that don't just follow steps, but solve problems. They can research a competitor, draft a full report, and notify your team of the findings autonomously.",
-      concepts: ["Neural Agents", "Self-Correction", "Scale"],
+      title: "Empire: Ecosystem Dominance",
+      desc: "A multi-platform chatbot ecosystem. Your bots work across WhatsApp, Telegram, and Web, syncing data autonomously and closing deals without human intervention.",
+      concepts: ["Cross-Platform", "Self-Correction", "Massive Scale"],
       icon: <Cpu className="text-[#FF6B00]" size={32} />
     }
   ];
@@ -71,8 +71,8 @@ export default function AboutAutomation() {
           </Link>
           
           <div className="hidden lg:flex items-center gap-10">
-            <Link to="/ai-solutions" className="text-[13px] font-black uppercase tracking-[0.2em] hover:text-[#FF6B00] transition-colors">AI Solutions</Link>
-            <Link to="/what-is-automation" className="text-[13px] font-black uppercase tracking-[0.2em] text-[#FF6B00]">Automation Lab</Link>
+            <Link to="/ai-solutions" className="text-[14px] font-black uppercase tracking-[0.2em] text-gray-600 hover:text-[#FF6B00] transition-colors">Chatbot Solutions</Link>
+            <Link to="/what-is-automation" className="text-[14px] font-black uppercase tracking-[0.2em] text-[#FF6B00]">Chatbot Lab</Link>
             <Link to="/projects" className="text-[13px] font-black uppercase tracking-[0.2em] hover:text-[#FF6B00] transition-colors">Web Artifacts</Link>
             <Link to="/pricing" className="text-[13px] font-black uppercase tracking-[0.2em] hover:text-[#FF6B00] transition-colors">Pricing</Link>
             <Link to="/contact" className="px-8 py-4 bg-[#FF6B00] text-white font-black text-[12px] uppercase tracking-widest hover:bg-black transition-all rounded-sm">Reach Out</Link>
@@ -90,8 +90,8 @@ export default function AboutAutomation() {
 
       {/* Mobile Menu Overlay */}
       <div className={`fixed inset-0 z-[110] bg-black transition-all duration-700 flex flex-col items-center justify-center gap-10 ${mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'}`}>
-          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>AI Solutions</Link>
-          <Link to="/what-is-automation" className="text-4xl font-black text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Automation Lab</Link>
+          <Link to="/ai-solutions" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Solutions</Link>
+          <Link to="/what-is-automation" className="text-4xl font-black text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Chatbot Lab</Link>
           <Link to="/projects" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Web Artifacts</Link>
           <Link to="/pricing" className="text-4xl font-black text-white hover:text-[#FF6B00]" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
           <Link to="/contact" className="px-16 py-6 bg-[#FF6B00] text-white font-black text-xl uppercase tracking-widest rounded-sm mt-10" onClick={() => setMobileMenuOpen(false)}>Reach Out</Link>
@@ -111,7 +111,7 @@ export default function AboutAutomation() {
               </div>
               <h1 className="text-4xl md:text-[110px] font-black text-black leading-[1] md:leading-[0.85] tracking-tighter uppercase italic mb-8 md:mb-10 px-2">
                 DECODING<br/>
-                <span className="text-[#FF6B00] not-italic">AUTOMATION</span>
+                <span className="text-[#FF6B00] not-italic">CHATBOTS</span>
               </h1>
               <p className="text-lg md:text-2xl text-gray-500 font-medium max-w-xl leading-relaxed mb-10 md:mb-12 italic mx-auto lg:mx-0 px-4">
                 From basic triggers to autonomous neural systems—learn how we engineer the systems that liberate your time.
@@ -138,8 +138,8 @@ export default function AboutAutomation() {
       <section className="py-48 px-6 md:px-12 bg-black text-white relative">
         <div className="max-w-[1400px] mx-auto">
           <div className="text-center mb-20 md:mb-32">
-            <h2 className="text-4xl md:text-8xl font-black italic tracking-tighter uppercase mb-6 leading-[1] md:leading-none">THE NEURAL <span className="text-[#FF6B00] not-italic">LADDER.</span></h2>
-            <p className="text-gray-400 text-sm md:text-xl font-medium tracking-widest uppercase px-4">The path from manual labor to autonomous dominance.</p>
+            <h2 className="text-4xl md:text-8xl font-black italic tracking-tighter uppercase mb-6 leading-[1] md:leading-none">THE CHATBOT <span className="text-[#FF6B00] not-italic">LADDER.</span></h2>
+            <p className="text-gray-400 text-sm md:text-xl font-medium tracking-widest uppercase px-4">The path from single-response to ecosystem dominance.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
@@ -167,9 +167,9 @@ export default function AboutAutomation() {
               <h2 className="text-4xl md:text-8xl font-black italic tracking-tighter uppercase mb-10 leading-[1] md:leading-[0.9]">HOW WE TURN<br/><span className="text-[#FF6B00] not-italic">ANY BUSINESS</span><br/>AROUND.</h2>
               <div className="space-y-12 mt-20">
                  {[
-                   { title: "Time Redemption", desc: "Automating lead management and customer support can save an average of 15-20 engineering hours per week." },
-                   { title: "Zero Leakage", desc: "Humans forget. AI doesn't. Every lead is followed up, every bill is processed, and every data point is captured." },
-                   { title: "Infinite Scale", desc: "Manual businesses scale by hiring. Automated businesses scale by increasing computing power. It's cheaper and faster." }
+                   { title: "24/7 Presence", desc: "A chatbot ensures you never miss a lead in Pakistan. While you sleep, the bot is qualifying and selling." },
+                   { title: "Scale without Labor", desc: "A single WhatsApp bot can handle 1,000 customers simultaneously. No hiring, no management, just pure efficiency." },
+                   { title: "Zero Wait-Time", desc: "Customers in high-velocity markets demand instant answers. Our bots deliver sub-second intelligence across any platform." }
                  ].map((ben, i) => (
                    <div key={i} className="flex gap-8">
                       <div className="text-2xl font-black italic text-[#FF6B00]">0{i+1}</div>
